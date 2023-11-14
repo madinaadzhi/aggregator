@@ -1,0 +1,9 @@
+{
+  "method": "GetCategories",
+  "data": {
+    "merchantId": 1,
+    "basketGuid": "",
+    "deliveryType": 2,
+    "filialId": 3288
+  }
+}
