@@ -3,11 +3,11 @@
     {
       "sets": [
         {
-          "id": "klatsniznyzhky",
-          "title": "Клацні знижки",
+          "id": "black-friday",
+          "title": "10 чорних п'ятниць",
           "isMainPage": false,
           "isTab": false,
-          "order": 24,
+          "order": 16,
           "filials": null,
           "deliveryData": [
             {
@@ -30,11 +30,38 @@
           "iconPath": null
         },
         {
-          "id": "pre_black_friday",
-          "title": "Репетиція Чорних п’ятниць",
+          "id": "klatsniznyzhky",
+          "title": "Клацні знижки",
           "isMainPage": false,
           "isTab": false,
-          "order": 24,
+          "order": 16,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 71,
           "filials": null,
           "deliveryData": [
             {
@@ -59,7 +86,7 @@
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -68,7 +95,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -77,16 +104,7 @@
           "slug": null
         },
         {
-          "id": 4418,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4427,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -95,115 +113,85 @@
           "slug": null
         }
       ],
-      "id": 738384,
-      "name": "Індичий стейк з філе",
-      "unit": "100г",
-      "price": 24.85,
-      "oldPrice": 28.9,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/73/480x480wwm/738384_480x480wwm_bc404712-b607-c81d-f4d6-3c2e5660c5d7.png",
-      "division": 0.5,
+      "id": 137604,
+      "name": "Пітахая червона",
+      "unit": "шт",
+      "price": 62.99,
+      "oldPrice": 89.99,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/13/480x480wwm/137604_480x480wwm_6a41ebb9-8f8c-3232-049a-a149abfd6d8c.png",
+      "division": 1.0,
       "promotion": {
         "id": "only_online",
         "title": "Клацні знижки",
-        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/klatsni_bubble.svg",
+        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
         "items": null,
-        "startFrom": "09.11.2023",
-        "stopAfter": "15.11.2023",
+        "startFrom": "16.11.2023",
+        "stopAfter": "22.11.2023",
         "description": null,
         "bonusQuantity": null,
         "backColor": null,
         "minCount": null,
         "fontColor": null
       },
-      "slug": "indychyi-steik-z-file-738384",
+      "slug": "pitakhaia-chervona-137604",
       "storeQuantity": 1.0,
       "promoId": "only_online",
       "promoTitle": "Клацні знижки",
       "bubbles": [
         {
-          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/klatsni_bubble.svg",
+          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
           "type": "promo",
           "id": "only_online"
         }
       ],
-      "priceStartFrom": "09.11.2023",
-      "priceStopAfter": "15.11.2023",
-      "calcStoreQuantity": 200.0,
+      "priceStartFrom": "16.11.2023",
+      "priceStopAfter": "22.11.2023",
+      "calcStoreQuantity": 14.0,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "84/354",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
           "key": "country",
-          "value": "Україна",
+          "value": "В'єтнам",
           "name": "Країна",
           "valueId": null
         },
         {
+          "key": "description for silpo.ua/MA",
+          "value": "Червона зовні, біла всередині. На смак пітахайя з білою м'якоттю солодкувата, соковита, нагадує фруктовий сорбет зі смаком банана та ківі. М'якоть пітахайї вживають в злегка охолодженому вигляді. Її можна нарізати на часточки подібно дині або просто розрізати навпіл і їсти ложкою. У складі міститься достатня кількість вітамінів і мінеральних елементів. Цей екзотичний фрукт корисно вживати при порушеннях функцій ендокринних залоз і шлунково-кишкових захворюваннях.",
+          "name": "Маркетинговий опис продукту для сайту/МП",
+          "valueId": null
+        },
+        {
           "key": "discountString",
-          "value": "-14%",
+          "value": "-30%",
           "name": null,
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "0.7",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19.5",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Без ТМ",
-          "name": "Торгова марка",
           "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "oldPrice",
-          "Value": 28.9
+          "Value": 89.99
         },
         {
           "Type": "price",
-          "Value": 24.85
+          "Value": 62.99
         },
         {
           "Type": "priceOpt",
-          "Value": 28.9
+          "Value": 89.99
         }
       ],
       "promotions": [
         {
           "id": "only_online",
           "title": "Клацні знижки",
-          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/klatsni_bubble.svg",
+          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
           "items": null,
-          "startFrom": "09.11.2023",
-          "stopAfter": "15.11.2023",
+          "startFrom": "16.11.2023",
+          "stopAfter": "22.11.2023",
           "description": "Купуйте онлайн та заощаджуйте.",
           "bonusQuantity": null,
           "backColor": null,
@@ -211,21 +199,21 @@
           "fontColor": null
         }
       ],
-      "rating": 5.0,
-      "votesCount": 6,
+      "rating": 2.3,
+      "votesCount": 12,
       "complexSku": null,
-      "quantity": 200.0,
+      "quantity": 14.0,
       "highlight": "",
       "techParameters": null
     },
     {
       "sets": [
         {
-          "id": "klatsniznyzhky",
-          "title": "Клацні знижки",
+          "id": "black-friday",
+          "title": "10 чорних п'ятниць",
           "isMainPage": false,
           "isTab": false,
-          "order": 25,
+          "order": 265,
           "filials": null,
           "deliveryData": [
             {
@@ -248,11 +236,38 @@
           "iconPath": null
         },
         {
-          "id": "pre_black_friday",
-          "title": "Репетиція Чорних п’ятниць",
+          "id": "klatsniznyzhky",
+          "title": "Клацні знижки",
           "isMainPage": false,
           "isTab": false,
-          "order": 25,
+          "order": 265,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 158,
           "filials": null,
           "deliveryData": [
             {
@@ -277,7 +292,7 @@
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -286,7 +301,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -295,16 +310,7 @@
           "slug": null
         },
         {
-          "id": 4418,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4427,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -313,72 +319,54 @@
           "slug": null
         }
       ],
-      "id": 775268,
-      "name": "Індичий стейк, філе міньйон",
+      "id": 557563,
+      "name": "Хурма, Азербайджан",
       "unit": "100г",
-      "price": 25.28,
-      "oldPrice": 29.4,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/77/480x480wwm/775268_480x480wwm_c3120f8e-df67-f985-3838-cff4d085dfdc.png",
-      "division": 0.5,
+      "price": 5.81,
+      "oldPrice": 7.0,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/55/480x480wwm/557563_480x480wwm_1dedf7a9-ddfe-81d6-f44e-32e64b749853.png",
+      "division": 0.25,
       "promotion": {
         "id": "only_online",
         "title": "Клацні знижки",
-        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/klatsni_bubble.svg",
+        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
         "items": null,
-        "startFrom": "09.11.2023",
-        "stopAfter": "15.11.2023",
+        "startFrom": "16.11.2023",
+        "stopAfter": "22.11.2023",
         "description": null,
         "bonusQuantity": null,
         "backColor": null,
         "minCount": null,
         "fontColor": null
       },
-      "slug": "indychyi-steik-file-minion-775268",
+      "slug": "khurma-azerbaidzhan-557563",
       "storeQuantity": 1.0,
       "promoId": "only_online",
       "promoTitle": "Клацні знижки",
       "bubbles": [
         {
-          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/klatsni_bubble.svg",
+          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
           "type": "promo",
           "id": "only_online"
         }
       ],
-      "priceStartFrom": "09.11.2023",
-      "priceStopAfter": "15.11.2023",
-      "calcStoreQuantity": 200.0,
+      "priceStartFrom": "16.11.2023",
+      "priceStopAfter": "22.11.2023",
+      "calcStoreQuantity": 78.083,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "84/354",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
           "key": "country",
-          "value": "Україна",
+          "value": "Азербайджан",
           "name": "Країна",
           "valueId": null
         },
         {
           "key": "discountString",
-          "value": "-14%",
+          "value": "-17%",
           "name": null,
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "0.7",
-          "name": "Жири",
           "valueId": null
         },
         {
@@ -386,42 +374,30 @@
           "value": "",
           "name": "",
           "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19.5",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Без ТМ",
-          "name": "Торгова марка",
-          "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "oldPrice",
-          "Value": 29.4
+          "Value": 7.0
         },
         {
           "Type": "price",
-          "Value": 25.28
+          "Value": 5.81
         },
         {
           "Type": "priceOpt",
-          "Value": 29.4
+          "Value": 7.0
         }
       ],
       "promotions": [
         {
           "id": "only_online",
           "title": "Клацні знижки",
-          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/klatsni_bubble.svg",
+          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
           "items": null,
-          "startFrom": "09.11.2023",
-          "stopAfter": "15.11.2023",
+          "startFrom": "16.11.2023",
+          "stopAfter": "22.11.2023",
           "description": "Купуйте онлайн та заощаджуйте.",
           "bonusQuantity": null,
           "backColor": null,
@@ -429,10 +405,10 @@
           "fontColor": null
         }
       ],
-      "rating": 5.0,
-      "votesCount": 1,
+      "rating": 3.3,
+      "votesCount": 18,
       "complexSku": null,
-      "quantity": 200.0,
+      "quantity": 78.083,
       "highlight": "",
       "techParameters": null
     },
@@ -443,7 +419,7 @@
           "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
           "isMainPage": false,
           "isTab": false,
-          "order": 1177,
+          "order": 177,
           "filials": null,
           "deliveryData": [
             {
@@ -470,7 +446,7 @@
           "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
           "isMainPage": false,
           "isTab": false,
-          "order": 1179,
+          "order": 179,
           "filials": null,
           "deliveryData": [
             {
@@ -483,11 +459,92 @@
             }
           ],
           "iconPath": null
+        },
+        {
+          "id": "black-friday",
+          "title": "10 чорних п'ятниць",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 314,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "klatsniznyzhky",
+          "title": "Клацні знижки",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 314,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 35,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
         }
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -496,7 +553,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -505,7 +562,7 @@
           "slug": null
         },
         {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -514,75 +571,466 @@
           "slug": null
         }
       ],
-      "id": 837993,
-      "name": "Курячі стріпси «Наша Ряба» із філе, лоток",
-      "unit": "0,5кг",
-      "price": 117.0,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/83/480x480wwm/837993_480x480wwm_73485058-6fb5-0055-455a-455b8b64aa84.png",
+      "id": 38279,
+      "name": "Манго Еліт",
+      "unit": "шт",
+      "price": 80.09,
+      "oldPrice": 89.99,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/3/480x480wwm/38279_480x480wwm_0583b9b5-05b6-e646-85f0-fa65d7bfef7f.png",
       "division": 1.0,
-      "promotion": null,
-      "slug": "kuriachi-stripsy-nasha-riaba-iz-file-lotok-837993",
+      "promotion": {
+        "id": "only_online",
+        "title": "Клацні знижки",
+        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+        "items": null,
+        "startFrom": "16.11.2023",
+        "stopAfter": "22.11.2023",
+        "description": null,
+        "bonusQuantity": null,
+        "backColor": null,
+        "minCount": null,
+        "fontColor": null
+      },
+      "slug": "mango-elit-38279",
       "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
+      "promoId": "only_online",
+      "promoTitle": "Клацні знижки",
+      "bubbles": [
+        {
+          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "type": "promo",
+          "id": "only_online"
+        }
+      ],
+      "priceStartFrom": "16.11.2023",
+      "priceStopAfter": "22.11.2023",
+      "calcStoreQuantity": 4.0,
+      "ecoPacking": false,
+      "recommendationBlockName": "Рекомендації",
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Бразилія",
+          "name": "Країна",
+          "valueId": null
+        },
+        {
+          "key": "discountString",
+          "value": "-11%",
+          "name": null,
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "oldPrice",
+          "Value": 89.99
+        },
+        {
+          "Type": "price",
+          "Value": 80.09
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 89.99
+        }
+      ],
+      "promotions": [
+        {
+          "id": "only_online",
+          "title": "Клацні знижки",
+          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "items": null,
+          "startFrom": "16.11.2023",
+          "stopAfter": "22.11.2023",
+          "description": "Купуйте онлайн та заощаджуйте.",
+          "bonusQuantity": null,
+          "backColor": null,
+          "minCount": null,
+          "fontColor": null
+        }
+      ],
+      "rating": 2.9,
+      "votesCount": 51,
+      "complexSku": null,
+      "quantity": 4.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": [
+        {
+          "id": "black-friday",
+          "title": "10 чорних п'ятниць",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 459,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "klatsniznyzhky",
+          "title": "Клацні знижки",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 459,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 61,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 114475,
+      "name": "Айва",
+      "unit": "100г",
+      "price": 7.82,
+      "oldPrice": 9.9,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/11/480x480wwm/114475_480x480wwm_8e05c799-0da0-9907-4984-c28a8cfdba93.png",
+      "division": 0.5,
+      "promotion": {
+        "id": "only_online",
+        "title": "Клацні знижки",
+        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+        "items": null,
+        "startFrom": "16.11.2023",
+        "stopAfter": "22.11.2023",
+        "description": null,
+        "bonusQuantity": null,
+        "backColor": null,
+        "minCount": null,
+        "fontColor": null
+      },
+      "slug": "aiva-114475",
+      "storeQuantity": 1.0,
+      "promoId": "only_online",
+      "promoTitle": "Клацні знижки",
+      "bubbles": [
+        {
+          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "type": "promo",
+          "id": "only_online"
+        }
+      ],
+      "priceStartFrom": "16.11.2023",
+      "priceStopAfter": "22.11.2023",
+      "calcStoreQuantity": 27.142,
+      "ecoPacking": false,
+      "recommendationBlockName": "Рекомендації",
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Туреччина",
+          "name": "Країна",
+          "valueId": null
+        },
+        {
+          "key": "discountString",
+          "value": "-21%",
+          "name": null,
+          "valueId": null
+        },
+        {
+          "key": "isWeighted",
+          "value": "",
+          "name": "",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "oldPrice",
+          "Value": 9.9
+        },
+        {
+          "Type": "price",
+          "Value": 7.82
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 9.9
+        }
+      ],
+      "promotions": [
+        {
+          "id": "only_online",
+          "title": "Клацні знижки",
+          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "items": null,
+          "startFrom": "16.11.2023",
+          "stopAfter": "22.11.2023",
+          "description": "Купуйте онлайн та заощаджуйте.",
+          "bonusQuantity": null,
+          "backColor": null,
+          "minCount": null,
+          "fontColor": null
+        }
+      ],
+      "rating": 5.0,
+      "votesCount": 2,
+      "complexSku": null,
+      "quantity": 27.142,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": [
+        {
+          "id": "black-friday",
+          "title": "10 чорних п'ятниць",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 1325,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "klatsniznyzhky",
+          "title": "Клацні знижки",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 1325,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 192815,
+      "name": "Тамарило",
+      "unit": "шт",
+      "price": 60.89,
+      "oldPrice": 69.99,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/19/480x480wwm/192815_480x480wwm_5cbd5ebd-3ea4-9d63-2e53-1a6ae5cca9d7.png",
+      "division": 1.0,
+      "promotion": {
+        "id": "only_online",
+        "title": "Клацні знижки",
+        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+        "items": null,
+        "startFrom": "16.11.2023",
+        "stopAfter": "22.11.2023",
+        "description": null,
+        "bonusQuantity": null,
+        "backColor": null,
+        "minCount": null,
+        "fontColor": null
+      },
+      "slug": "tamarylo-192815",
+      "storeQuantity": 1.0,
+      "promoId": "only_online",
+      "promoTitle": "Клацні знижки",
+      "bubbles": [
+        {
+          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "type": "promo",
+          "id": "only_online"
+        }
+      ],
+      "priceStartFrom": "16.11.2023",
+      "priceStopAfter": "22.11.2023",
       "calcStoreQuantity": 14.0,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "98/410",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
           "key": "country",
-          "value": "Україна",
+          "value": "Колумбія",
           "name": "Країна",
           "valueId": null
         },
         {
-          "key": "fats",
-          "value": "2.4",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Наша Ряба",
-          "name": "Торгова марка",
+          "key": "discountString",
+          "value": "-13%",
+          "name": null,
           "valueId": null
         }
       ],
       "prices": [
         {
+          "Type": "oldPrice",
+          "Value": 69.99
+        },
+        {
           "Type": "price",
-          "Value": 117.0
+          "Value": 60.89
         },
         {
           "Type": "priceOpt",
-          "Value": 116.0
+          "Value": 69.99
         }
       ],
-      "promotions": null,
-      "rating": 5.0,
+      "promotions": [
+        {
+          "id": "only_online",
+          "title": "Клацні знижки",
+          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "items": null,
+          "startFrom": "16.11.2023",
+          "stopAfter": "22.11.2023",
+          "description": "Купуйте онлайн та заощаджуйте.",
+          "bonusQuantity": null,
+          "backColor": null,
+          "minCount": null,
+          "fontColor": null
+        }
+      ],
+      "rating": 4.0,
       "votesCount": 2,
       "complexSku": null,
       "quantity": 14.0,
@@ -592,11 +1040,11 @@
     {
       "sets": [
         {
-          "id": "asortyment_dneprovskaia_naberezhnaia,_33a_darkstore",
-          "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
+          "id": "black-friday",
+          "title": "10 чорних п'ятниць",
           "isMainPage": false,
           "isTab": false,
-          "order": 1619,
+          "order": 961,
           "filials": null,
           "deliveryData": [
             {
@@ -619,15 +1067,23 @@
           "iconPath": null
         },
         {
-          "id": "asortyment_dneprovskaia_naberezhnaia,_33a_darkstore",
-          "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
+          "id": "klatsniznyzhky",
+          "title": "Клацні знижки",
           "isMainPage": false,
           "isTab": false,
-          "order": 1621,
+          "order": 961,
           "filials": null,
           "deliveryData": [
             {
-              "type": 1,
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
               "order": 0,
               "isMainPage": false,
               "isCheckout": false,
@@ -640,7 +1096,7 @@
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -649,7 +1105,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -658,16 +1114,7 @@
           "slug": null
         },
         {
-          "id": 4423,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -676,89 +1123,101 @@
           "slug": null
         }
       ],
-      "id": 914556,
-      "name": "Курочка тапака «Наша Ряба» «Апетитна» без кісток охолоджена",
-      "unit": "1,1кг",
-      "price": 239.0,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/91/480x480wwm/914556_480x480wwm_684d7b05-4ba4-9606-393d-bb1accc51407.png",
+      "id": 137594,
+      "name": "Ківано",
+      "unit": "шт",
+      "price": 65.59,
+      "oldPrice": 79.99,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/13/480x480wwm/137594_480x480wwm_1d49266c-86b9-f368-03ac-bee7b00c1575.png",
       "division": 1.0,
-      "promotion": null,
-      "slug": "kurochka-tapaka-nasha-riaba-apetytna-bez-kistok-okholodzhena-914556",
+      "promotion": {
+        "id": "only_online",
+        "title": "Клацні знижки",
+        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+        "items": null,
+        "startFrom": "16.11.2023",
+        "stopAfter": "22.11.2023",
+        "description": null,
+        "bonusQuantity": null,
+        "backColor": null,
+        "minCount": null,
+        "fontColor": null
+      },
+      "slug": "kivano-137594",
       "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 4.0,
+      "promoId": "only_online",
+      "promoTitle": "Клацні знижки",
+      "bubbles": [
+        {
+          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "type": "promo",
+          "id": "only_online"
+        }
+      ],
+      "priceStartFrom": "16.11.2023",
+      "priceStopAfter": "22.11.2023",
+      "calcStoreQuantity": 15.0,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "252/1060",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0.0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
           "key": "country",
-          "value": "Україна",
+          "value": "Домініканська Рес-ка",
           "name": "Країна",
           "valueId": null
         },
         {
-          "key": "fats",
-          "value": "20.0",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "18.1",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Наша Ряба",
-          "name": "Торгова марка",
+          "key": "discountString",
+          "value": "-18%",
+          "name": null,
           "valueId": null
         }
       ],
       "prices": [
         {
+          "Type": "oldPrice",
+          "Value": 79.99
+        },
+        {
           "Type": "price",
-          "Value": 239.0
+          "Value": 65.59
         },
         {
           "Type": "priceOpt",
-          "Value": 239.0
+          "Value": 79.99
         }
       ],
-      "promotions": null,
-      "rating": 4.8,
-      "votesCount": 6,
+      "promotions": [
+        {
+          "id": "only_online",
+          "title": "Клацні знижки",
+          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "items": null,
+          "startFrom": "16.11.2023",
+          "stopAfter": "22.11.2023",
+          "description": "Купуйте онлайн та заощаджуйте.",
+          "bonusQuantity": null,
+          "backColor": null,
+          "minCount": null,
+          "fontColor": null
+        }
+      ],
+      "rating": 1.7,
+      "votesCount": 18,
       "complexSku": null,
-      "quantity": 4.0,
+      "quantity": 15.0,
       "highlight": "",
       "techParameters": null
     },
     {
       "sets": [
         {
-          "id": "asortyment_dneprovskaia_naberezhnaia,_33a_darkstore",
-          "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
+          "id": "black-friday",
+          "title": "10 чорних п'ятниць",
           "isMainPage": false,
           "isTab": false,
-          "order": 1620,
+          "order": 1414,
           "filials": null,
           "deliveryData": [
             {
@@ -781,15 +1240,50 @@
           "iconPath": null
         },
         {
-          "id": "asortyment_dneprovskaia_naberezhnaia,_33a_darkstore",
-          "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
+          "id": "klatsniznyzhky",
+          "title": "Клацні знижки",
           "isMainPage": false,
           "isTab": false,
-          "order": 1622,
+          "order": 1414,
           "filials": null,
           "deliveryData": [
             {
-              "type": 1,
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 30,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
               "order": 0,
               "isMainPage": false,
               "isCheckout": false,
@@ -802,7 +1296,7 @@
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -811,7 +1305,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -820,16 +1314,7 @@
           "slug": null
         },
         {
-          "id": 4423,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -838,29 +1323,175 @@
           "slug": null
         }
       ],
-      "id": 914558,
-      "name": "Стегно «Наша Ряба» «Апетитна» «Сметана та зелень» охолоджене",
-      "unit": "0,9кг",
-      "price": 184.0,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/91/480x480wwm/914558_480x480wwm_3dcbff2c-09ab-41b4-5a28-323490094b8c.png",
+      "id": 35093,
+      "name": "Карамбола",
+      "unit": "шт",
+      "price": 63.99,
+      "oldPrice": 79.99,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/3/480x480wwm/35093_480x480wwm_df58a841-3532-21eb-5113-2076cc8e73dc.png",
       "division": 1.0,
+      "promotion": {
+        "id": "only_online",
+        "title": "Клацні знижки",
+        "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+        "items": null,
+        "startFrom": "16.11.2023",
+        "stopAfter": "22.11.2023",
+        "description": null,
+        "bonusQuantity": null,
+        "backColor": null,
+        "minCount": null,
+        "fontColor": null
+      },
+      "slug": "karambola-35093",
+      "storeQuantity": 1.0,
+      "promoId": "only_online",
+      "promoTitle": "Клацні знижки",
+      "bubbles": [
+        {
+          "bubblePath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "type": "promo",
+          "id": "only_online"
+        }
+      ],
+      "priceStartFrom": "16.11.2023",
+      "priceStopAfter": "22.11.2023",
+      "calcStoreQuantity": 24.0,
+      "ecoPacking": false,
+      "recommendationBlockName": "Рекомендації",
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Колумбія",
+          "name": "Країна",
+          "valueId": null
+        },
+        {
+          "key": "discountString",
+          "value": "-20%",
+          "name": null,
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "oldPrice",
+          "Value": 79.99
+        },
+        {
+          "Type": "price",
+          "Value": 63.99
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 79.99
+        }
+      ],
+      "promotions": [
+        {
+          "id": "only_online",
+          "title": "Клацні знижки",
+          "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/blackfriday.svg",
+          "items": null,
+          "startFrom": "16.11.2023",
+          "stopAfter": "22.11.2023",
+          "description": "Купуйте онлайн та заощаджуйте.",
+          "bonusQuantity": null,
+          "backColor": null,
+          "minCount": null,
+          "fontColor": null
+        }
+      ],
+      "rating": 2.5,
+      "votesCount": 2,
+      "complexSku": null,
+      "quantity": 24.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": [
+        {
+          "id": "sushi-roly_kaliforniia_z_krabovymy_palychkamy",
+          "title": "Суші-роли «Каліфорнія» з крабовими паличками",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 21,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 928216,
+      "name": "Авокадо",
+      "unit": "100г",
+      "price": 16.9,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/92/480x480wwm/928216_480x480wwm_8a45ddeb-825f-05fd-47b7-fcf4d67b8766.png",
+      "division": 0.1,
       "promotion": null,
-      "slug": "stegno-nasha-riaba-apetytna-smetana-ta-zelen-okholodzhene-914558",
+      "slug": "avokado-928216",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 3.0,
+      "calcStoreQuantity": 43.712,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
           "key": "calorie",
-          "value": "210/881",
+          "value": "4/17",
           "name": "Енергетична цінність",
           "valueId": null
         },
@@ -872,175 +1503,8 @@
         },
         {
           "key": "country",
-          "value": "Україна",
+          "value": "Кенія",
           "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "16.9",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "13.4",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Наша Ряба",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 184.0
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 184.0
-        }
-      ],
-      "promotions": null,
-      "rating": 5.0,
-      "votesCount": 3,
-      "complexSku": null,
-      "quantity": 3.0,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": [
-        {
-          "id": "25_shefiv_rekomendatsii",
-          "title": "25 шефів рекомендації",
-          "isMainPage": false,
-          "isTab": false,
-          "order": 9,
-          "filials": null,
-          "deliveryData": [
-            {
-              "type": 2,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            },
-            {
-              "type": 9,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            }
-          ],
-          "iconPath": null
-        },
-        {
-          "id": "luriachi_mitboly_iz_syrom_vseredyni_prosta_strava_do_piure_chy_makaroniv",
-          "title": "Курячі мітболи із сиром всередині — проста страва до пюре чи макаронів",
-          "isMainPage": false,
-          "isTab": false,
-          "order": 1,
-          "filials": null,
-          "deliveryData": [
-            {
-              "type": 2,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            },
-            {
-              "type": 9,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            }
-          ],
-          "iconPath": null
-        }
-      ],
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 461800,
-      "name": "Куряче філе",
-      "unit": "100г",
-      "price": 16.2,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/46/480x480wwm/461800_480x480wwm_4e4d3c08-b37c-30d7-a5da-54567d36e4e3.png",
-      "division": 0.5,
-      "promotion": null,
-      "slug": "kuriache-file-461800",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 298.759,
-      "ecoPacking": false,
-      "recommendationBlockName": "Рекомендації",
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "110/461",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "2.6",
-          "name": "Жири",
           "valueId": null
         },
         {
@@ -1050,63 +1514,41 @@
           "valueId": null
         },
         {
-          "key": "proteins",
-          "value": "21.6",
-          "name": "Білки",
+          "key": "numberOfUnits",
+          "value": "1",
+          "name": "Кількість одиниць",
+          "valueId": null
+        },
+        {
+          "key": "trademark",
+          "value": "Без ТМ",
+          "name": "Торгова марка",
           "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "price",
-          "Value": 16.2
+          "Value": 16.9
         },
         {
           "Type": "priceOpt",
-          "Value": 16.2
+          "Value": 16.9
         }
       ],
       "promotions": null,
       "rating": 4.3,
-      "votesCount": 103,
+      "votesCount": 83,
       "complexSku": null,
-      "quantity": 298.759,
+      "quantity": 43.712,
       "highlight": "",
       "techParameters": null
     },
     {
-      "sets": [
-        {
-          "id": "25_shefiv_rekomendatsii",
-          "title": "25 шефів рекомендації",
-          "isMainPage": false,
-          "isTab": false,
-          "order": 8,
-          "filials": null,
-          "deliveryData": [
-            {
-              "type": 2,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            },
-            {
-              "type": 9,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            }
-          ],
-          "iconPath": null
-        }
-      ],
+      "sets": null,
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1115,7 +1557,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1124,7 +1566,7 @@
           "slug": null
         },
         {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1133,27 +1575,27 @@
           "slug": null
         }
       ],
-      "id": 461762,
-      "name": "Куряче стегно",
+      "id": 881478,
+      "name": "Хурма Рохо",
       "unit": "100г",
-      "price": 9.5,
-      "oldPrice": 12.2,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/46/480x480wwm/461762_480x480wwm_a571afa9-0c17-bec8-b63c-6083e185a000.png",
-      "division": 0.5,
+      "price": 5.5,
+      "oldPrice": 7.0,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/88/480x480wwm/881478_480x480wwm_ce391464-bd08-748b-902c-6597df62fdba.png",
+      "division": 0.25,
       "promotion": {
         "id": "additional",
         "title": "Додаткові пропозиції",
         "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/00_site.svg",
         "items": null,
-        "startFrom": "12.11.2023",
-        "stopAfter": "12.11.2023",
+        "startFrom": "16.11.2023",
+        "stopAfter": "22.11.2023",
         "description": null,
         "bonusQuantity": null,
         "backColor": null,
         "minCount": null,
         "fontColor": null
       },
-      "slug": "kuriache-stegno-461762",
+      "slug": "khurma-rokho-881478",
       "storeQuantity": 1.0,
       "promoId": "additional",
       "promoTitle": "Додаткові пропозиції",
@@ -1164,41 +1606,41 @@
           "id": "additional"
         }
       ],
-      "priceStartFrom": "12.11.2023",
-      "priceStopAfter": "12.11.2023",
-      "calcStoreQuantity": 225.884,
+      "priceStartFrom": "16.11.2023",
+      "priceStopAfter": "22.11.2023",
+      "calcStoreQuantity": 486.362,
       "ecoPacking": false,
-      "recommendationBlockName": "Рекомендації",
+      "recommendationBlockName": null,
       "facings": null,
       "parameters": [
         {
           "key": "calorie",
-          "value": "192/804",
+          "value": "4/17",
           "name": "Енергетична цінність",
           "valueId": null
         },
         {
           "key": "carbohydrates",
-          "value": "0",
+          "value": "1.0",
           "name": "Вуглеводи",
           "valueId": null
         },
         {
           "key": "country",
-          "value": "Україна",
+          "value": "Іспанія",
           "name": "Країна",
           "valueId": null
         },
         {
-          "key": "discountString",
-          "value": "-22%",
-          "name": null,
+          "key": "description for silpo.ua/MA",
+          "value": "Плоди великі 250-300 г, подовженої форми, позбавлені насіння. Хурма набуває привабливого червоного кольору в період дозрівання. М'якуш щільний, твердий з приємним збалансованим смаком.",
+          "name": "Маркетинговий опис продукту для сайту/МП",
           "valueId": null
         },
         {
-          "key": "fats",
-          "value": "12.6",
-          "name": "Жири",
+          "key": "discountString",
+          "value": "-21%",
+          "name": null,
           "valueId": null
         },
         {
@@ -1208,24 +1650,30 @@
           "valueId": null
         },
         {
-          "key": "proteins",
-          "value": "19.6",
-          "name": "Білки",
+          "key": "numberOfUnits",
+          "value": "1",
+          "name": "Кількість одиниць",
+          "valueId": null
+        },
+        {
+          "key": "trademark",
+          "value": "Без ТМ",
+          "name": "Торгова марка",
           "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "oldPrice",
-          "Value": 12.2
+          "Value": 7.0
         },
         {
           "Type": "price",
-          "Value": 9.5
+          "Value": 5.5
         },
         {
           "Type": "priceOpt",
-          "Value": 9.5
+          "Value": 5.5
         }
       ],
       "promotions": [
@@ -1234,8 +1682,8 @@
           "title": "Додаткові пропозиції",
           "iconPath": "https://content.silpo.ua/hermes/MediaBubbles/Activities/00_site.svg",
           "items": null,
-          "startFrom": "12.11.2023",
-          "stopAfter": "12.11.2023",
+          "startFrom": "16.11.2023",
+          "stopAfter": "22.11.2023",
           "description": "Заощаджуй, купуй акційне.",
           "bonusQuantity": null,
           "backColor": null,
@@ -1243,21 +1691,21 @@
           "fontColor": null
         }
       ],
-      "rating": 3.3,
-      "votesCount": 39,
+      "rating": 4.5,
+      "votesCount": 63,
       "complexSku": null,
-      "quantity": 225.884,
+      "quantity": 486.362,
       "highlight": "",
       "techParameters": null
     },
     {
       "sets": [
         {
-          "id": "luriachi_mitboly_iz_syrom_vseredyni_prosta_strava_do_piure_chy_makaroniv",
-          "title": "Курячі мітболи із сиром всередині — проста страва до пюре чи макаронів",
+          "id": "sushi-roly_kaliforniia_z_krabovymy_palychkamy",
+          "title": "Суші-роли «Каліфорнія» з крабовими паличками",
           "isMainPage": false,
           "isTab": false,
-          "order": 5,
+          "order": 22,
           "filials": null,
           "deliveryData": [
             {
@@ -1282,7 +1730,7 @@
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1291,7 +1739,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1300,7 +1748,7 @@
           "slug": null
         },
         {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1309,29 +1757,29 @@
           "slug": null
         }
       ],
-      "id": 807533,
-      "name": "Куряче філе зі стегна «Наша Ряба» МУ лоток",
-      "unit": "100г",
-      "price": 22.4,
+      "id": 787133,
+      "name": "Авокадо Ready to eat",
+      "unit": "2шт/уп",
+      "price": 79.99,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/80/480x480wwm/807533_480x480wwm_66791bbd-d86c-5191-4b11-b25c6b50c3ba.png",
-      "division": 0.6,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/78/480x480wwm/787133_480x480wwm_11d143f3-53fd-891d-99be-91e5a6c12574.png",
+      "division": 1.0,
       "promotion": null,
-      "slug": "kuriache-file-zi-stegna-nasha-riaba-mu-lotok-807533",
+      "slug": "avokado-ready-to-eat-787133",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 50.339,
+      "calcStoreQuantity": 112.0,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
           "key": "calorie",
-          "value": "163,0/683,0",
+          "value": "4,0/16,8",
           "name": "Енергетична цінність",
           "valueId": null
         },
@@ -1343,292 +1791,25 @@
         },
         {
           "key": "country",
-          "value": "Україна",
+          "value": "Кенія",
           "name": "Країна",
           "valueId": null
         },
         {
           "key": "fats",
-          "value": "11",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "16",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Наша Ряба",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 22.4
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 22.4
-        }
-      ],
-      "promotions": null,
-      "rating": 5.0,
-      "votesCount": 1,
-      "complexSku": null,
-      "quantity": 50.339,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 461752,
-      "name": "Куряча гомілка",
-      "unit": "100г",
-      "price": 8.5,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/46/480x480wwm/461752_480x480wwm_cff9290f-8344-5628-7809-963f089c3bfa.png",
-      "division": 0.5,
-      "promotion": null,
-      "slug": "kuriacha-gomilka-461752",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 55.77,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "192/804",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
           "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "12.6",
           "name": "Жири",
           "valueId": null
         },
         {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
+          "key": "numberOfUnits",
+          "value": "2",
+          "name": "Кількість одиниць",
           "valueId": null
         },
         {
           "key": "proteins",
-          "value": "19.6",
-          "name": "Білки",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 8.5
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 8.5
-        }
-      ],
-      "promotions": null,
-      "rating": 3.4,
-      "votesCount": 50,
-      "complexSku": null,
-      "quantity": 55.77,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": [
-        {
-          "id": "25_shefiv_rekomendatsii",
-          "title": "25 шефів рекомендації",
-          "isMainPage": false,
-          "isTab": false,
-          "order": 40,
-          "filials": null,
-          "deliveryData": [
-            {
-              "type": 2,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            },
-            {
-              "type": 9,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            }
-          ],
-          "iconPath": null
-        },
-        {
-          "id": "luriachi_mitboly_iz_syrom_vseredyni_prosta_strava_do_piure_chy_makaroniv",
-          "title": "Курячі мітболи із сиром всередині — проста страва до пюре чи макаронів",
-          "isMainPage": false,
-          "isTab": false,
-          "order": 4,
-          "filials": null,
-          "deliveryData": [
-            {
-              "type": 2,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            },
-            {
-              "type": 9,
-              "order": 0,
-              "isMainPage": false,
-              "isCheckout": false,
-              "isTab": false,
-              "filials": null
-            }
-          ],
-          "iconPath": null
-        }
-      ],
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 757310,
-      "name": "Куряче філе зі стегна",
-      "unit": "100г",
-      "price": 19.9,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/75/480x480wwm/757310_480x480wwm_e96da2a2-007d-8624-404a-b41d81b0f270.png",
-      "division": 0.5,
-      "promotion": null,
-      "slug": "kuriache-file-zi-stegna-757310",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 90.626,
-      "ecoPacking": false,
-      "recommendationBlockName": "Рекомендації",
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "192/804",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "12.6",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19.6",
+          "value": "1",
           "name": "Білки",
           "valueId": null
         },
@@ -1642,26 +1823,54 @@
       "prices": [
         {
           "Type": "price",
-          "Value": 19.9
+          "Value": 79.99
         },
         {
           "Type": "priceOpt",
-          "Value": 19.9
+          "Value": 79.99
         }
       ],
       "promotions": null,
-      "rating": 3.6,
-      "votesCount": 80,
+      "rating": 1.9,
+      "votesCount": 15,
       "complexSku": null,
-      "quantity": 90.626,
+      "quantity": 112.0,
       "highlight": "",
       "techParameters": null
     },
     {
-      "sets": null,
+      "sets": [
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 3,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1670,7 +1879,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1679,7 +1888,7 @@
           "slug": null
         },
         {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1688,48 +1897,36 @@
           "slug": null
         }
       ],
-      "id": 494241,
-      "name": "Куряча четвертина",
+      "id": 24,
+      "name": "Гранат",
       "unit": "100г",
-      "price": 7.55,
+      "price": 7.0,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/49/480x480wwm/494241_480x480wwm_e7a1de33-bbdc-a865-bbfa-e6652a7fc54f.png",
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/0/480x480wwm/24_480x480wwm_1856a2a1-ed04-5107-3c70-4d6f8b412da0.png",
       "division": 0.5,
       "promotion": null,
-      "slug": "kuriacha-chetvertyna-494241",
+      "slug": "granat-24",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 49.934,
+      "calcStoreQuantity": 149.641,
       "ecoPacking": false,
-      "recommendationBlockName": null,
+      "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "192/804",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
           "key": "country",
-          "value": "Україна",
+          "value": "Туреччина",
           "name": "Країна",
           "valueId": null
         },
         {
-          "key": "fats",
-          "value": "12.6",
-          "name": "Жири",
+          "key": "description for silpo.ua/MA",
+          "value": "Гранат - це дуже смачний і неймовірно корисний фрукт. Він являє собою велику кулясту ягоду з щільною шкіркою, всередині якої містяться маленькі насінини, оповиті соковитою м`якоттю яскраво-червоного кольору. У стиглому гранаті може міститися до тисячі насінинок. Гранат багатий вітамінами і мінеральними елементами. Його можна вживати в сирому вигляді, використовувати для приготування соку, настоянки або відвару. Гранат має відмінні профілактичні та лікувальні властивості, його рекомендують вживати для поліпшення роботи серцево-судинної системи, при наявності цукрового діабету, виведення з організму радіонуклідів і просто для підвищення апетиту.",
+          "name": "Маркетинговий опис продукту для сайту/МП",
           "valueId": null
         },
         {
@@ -1737,29 +1934,318 @@
           "value": "",
           "name": "",
           "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 7.0
         },
         {
-          "key": "proteins",
-          "value": "19.6",
-          "name": "Білки",
+          "Type": "priceOpt",
+          "Value": 7.0
+        }
+      ],
+      "promotions": null,
+      "rating": 4.8,
+      "votesCount": 25,
+      "complexSku": null,
+      "quantity": 149.641,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": [
+        {
+          "id": "neochikuvano_fruktova_pitsa_dlia_ditlakhiv",
+          "title": "Неочікувано! Фруктова піца для дітлахів",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 44,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        },
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 65,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 134544,
+      "name": "Ківі ваговий",
+      "unit": "100г",
+      "price": 8.4,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/13/480x480wwm/134544_480x480wwm_51c75b4b-3b30-d785-a00c-9c4ebc1408b1.png",
+      "division": 0.5,
+      "promotion": null,
+      "slug": "kivi-vagovyi-134544",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 53.72,
+      "ecoPacking": false,
+      "recommendationBlockName": "Рекомендації",
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Греція",
+          "name": "Країна",
+          "valueId": null
+        },
+        {
+          "key": "isWeighted",
+          "value": "",
+          "name": "",
           "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "price",
-          "Value": 7.55
+          "Value": 8.4
         },
         {
           "Type": "priceOpt",
-          "Value": 7.55
+          "Value": 8.4
         }
       ],
       "promotions": null,
-      "rating": 3.1,
-      "votesCount": 44,
+      "rating": 4.0,
+      "votesCount": 36,
       "complexSku": null,
-      "quantity": 49.934,
+      "quantity": 53.72,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": null,
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 524418,
+      "name": "Хурма Корольок",
+      "unit": "100г",
+      "price": 9.0,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/52/480x480wwm/524418_480x480wwm_509a1205-4759-39e4-2061-64c475f9810a.png",
+      "division": 0.25,
+      "promotion": null,
+      "slug": "khurma-korolok-524418",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 63.26,
+      "ecoPacking": false,
+      "recommendationBlockName": null,
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Грузія",
+          "name": "Країна",
+          "valueId": null
+        },
+        {
+          "key": "isWeighted",
+          "value": "",
+          "name": "",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 9.0
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 9.0
+        }
+      ],
+      "promotions": null,
+      "rating": 3.3,
+      "votesCount": 4,
+      "complexSku": null,
+      "quantity": 63.26,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": null,
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 32507,
+      "name": "Ківі кошик",
+      "unit": "шт",
+      "price": 69.99,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/3/480x480wwm/32507_480x480wwm_f03390fa-636c-4d56-7ded-e5575dc1da02.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "kivi-koshyk-32507",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 55.0,
+      "ecoPacking": false,
+      "recommendationBlockName": null,
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Італія",
+          "name": "Країна",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 69.99
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 69.99
+        }
+      ],
+      "promotions": null,
+      "rating": 3.2,
+      "votesCount": 49,
+      "complexSku": null,
+      "quantity": 55.0,
       "highlight": "",
       "techParameters": null
     },
@@ -1770,7 +2256,7 @@
           "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
           "isMainPage": false,
           "isTab": false,
-          "order": 1050,
+          "order": 188,
           "filials": null,
           "deliveryData": [
             {
@@ -1797,7 +2283,7 @@
           "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
           "isMainPage": false,
           "isTab": false,
-          "order": 1052,
+          "order": 190,
           "filials": null,
           "deliveryData": [
             {
@@ -1814,7 +2300,7 @@
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1823,7 +2309,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1832,7 +2318,7 @@
           "slug": null
         },
         {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -1841,166 +2327,48 @@
           "slug": null
         }
       ],
-      "id": 807534,
-      "name": "Куряче філе зі стегна «Наша Ряба» СУ лоток",
-      "unit": "100г",
-      "price": 22.4,
+      "id": 49207,
+      "name": "Манго",
+      "unit": "шт",
+      "price": 54.99,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/80/480x480wwm/807534_480x480wwm_76cb611c-cc07-ec3d-998d-0abadd1a6fb4.png",
-      "division": 1.2,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/4/480x480wwm/49207_480x480wwm_e8381ace-0347-2ae4-090b-dc4e43860822.png",
+      "division": 1.0,
       "promotion": null,
-      "slug": "kuriache-file-zi-stegna-nasha-riaba-su-lotok-807534",
+      "slug": "mango-49207",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 34.906,
+      "calcStoreQuantity": 181.0,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "163,0/683,0",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
           "key": "country",
-          "value": "Україна",
+          "value": "Бразилія",
           "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "11",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "16",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Наша Ряба",
-          "name": "Торгова марка",
           "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "price",
-          "Value": 22.4
+          "Value": 54.99
         },
         {
           "Type": "priceOpt",
-          "Value": 22.4
-        }
-      ],
-      "promotions": null,
-      "rating": 4.6,
-      "votesCount": 11,
-      "complexSku": null,
-      "quantity": 34.906,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 609898,
-      "name": "Куряча грудка на кістці",
-      "unit": "100г",
-      "price": 12.3,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/60/480x480wwm/609898_480x480wwm_c88a05d8-1dc9-4198-0557-581d5e09d5e9.png",
-      "division": 0.7,
-      "promotion": null,
-      "slug": "kuriacha-grudka-na-kisttsi-609898",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 35.85,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 12.3
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 12.3
+          "Value": 49.99
         }
       ],
       "promotions": null,
       "rating": 3.3,
-      "votesCount": 16,
+      "votesCount": 85,
       "complexSku": null,
-      "quantity": 35.85,
+      "quantity": 181.0,
       "highlight": "",
       "techParameters": null
     },
@@ -2008,7 +2376,7 @@
       "sets": null,
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2017,7 +2385,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2026,16 +2394,7 @@
           "slug": null
         },
         {
-          "id": 4418,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4427,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2044,48 +2403,36 @@
           "slug": null
         }
       ],
-      "id": 688243,
-      "name": "Індичий гуляш охолоджений",
+      "id": 525139,
+      "name": "Черімоя",
       "unit": "100г",
-      "price": 19.9,
+      "price": 14.9,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/68/480x480wwm/688243_480x480wwm_e5e17f32-843c-d344-d2d0-9bff0d274879.png",
-      "division": 0.5,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/52/480x480wwm/525139_480x480wwm_0c5c836f-b32e-bf03-5f8f-0e68e0a84d1b.png",
+      "division": 0.1,
       "promotion": null,
-      "slug": "indychyi-guliash-okholodzhenyi-688243",
+      "slug": "cherimoia-525139",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 200.0,
+      "calcStoreQuantity": 1.034,
       "ecoPacking": false,
       "recommendationBlockName": null,
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "140/587",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
           "key": "country",
-          "value": "Україна",
+          "value": "Іспанія",
           "name": "Країна",
           "valueId": null
         },
         {
-          "key": "fats",
-          "value": "7",
-          "name": "Жири",
+          "key": "description for silpo.ua/MA",
+          "value": "За смаком плід солодкий і ніжний, що одночасно нагадує полуницю, папайю, банан і ананас. Є також вершкові нотки. У замороженому стані його м'якоть схожа на вершкове морозиво, внаслідок чого фрукт і називають морозивом, дуже солодкий, уряснений чорними насінинами розміром 1-2 см.",
+          "name": "Маркетинговий опис продукту для сайту/МП",
           "valueId": null
         },
         {
@@ -2093,270 +2440,31 @@
           "value": "",
           "name": "",
           "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19.2",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Без ТМ",
-          "name": "Торгова марка",
-          "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "price",
-          "Value": 19.9
+          "Value": 14.9
         },
         {
           "Type": "priceOpt",
-          "Value": 19.9
+          "Value": 14.9
         }
       ],
       "promotions": null,
-      "rating": 2.6,
-      "votesCount": 5,
+      "rating": 3.4,
+      "votesCount": 37,
       "complexSku": null,
-      "quantity": 200.0,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 681330,
-      "name": "Куряче крило, плечова частина охолоджене",
-      "unit": "100г",
-      "price": 9.39,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/68/480x480wwm/681330_480x480wwm_4f05caf4-bdac-1688-7212-45c18f27eb25.png",
-      "division": 0.5,
-      "promotion": null,
-      "slug": "kuriache-krylo-plechova-chastyna-okholodzhene-681330",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 36.016,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "60/251,4",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "0",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "15",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Без ТМ",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 9.39
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 9.39
-        }
-      ],
-      "promotions": null,
-      "rating": 4.3,
-      "votesCount": 6,
-      "complexSku": null,
-      "quantity": 36.016,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4418,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4427,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 12576,
-      "name": "Індиче крило охолоджене",
-      "unit": "100г",
-      "price": 12.4,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/1/480x480wwm/12576_480x480wwm_2cc4ceb0-b1bc-545e-2de0-d88d147c79ca.png",
-      "division": 0.5,
-      "promotion": null,
-      "slug": "indyche-krylo-okholodzhene-12576",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 200.0,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "192/806",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "12.6",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19.6",
-          "name": "Білки",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 12.4
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 12.4
-        }
-      ],
-      "promotions": null,
-      "rating": 2.0,
-      "votesCount": 3,
-      "complexSku": null,
-      "quantity": 200.0,
+      "quantity": 1.034,
       "highlight": "",
       "techParameters": null
     },
     {
       "sets": [
         {
-          "id": "yak_smachno_pryhotuvaty_kurcha_tabaka",
-          "title": "Як смачно приготувати курча табака",
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
           "isMainPage": false,
           "isTab": false,
           "order": 2,
@@ -2384,7 +2492,7 @@
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2393,7 +2501,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2402,7 +2510,7 @@
           "slug": null
         },
         {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2411,86 +2519,84 @@
           "slug": null
         }
       ],
-      "id": 461812,
-      "name": "Курка охолоджена",
+      "id": 18,
+      "name": "Фейхоа",
       "unit": "100г",
-      "price": 8.2,
+      "price": 29.9,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/46/480x480wwm/461812_480x480wwm_4d8f3964-5f29-3e85-c317-433725c5f881.png",
-      "division": 1.9,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/0/480x480wwm/18_480x480wwm_90964924-404f-792c-df61-1d0b50564f49.png",
+      "division": 0.1,
       "promotion": null,
-      "slug": "kurka-okholodzhena-461812",
+      "slug": "feikhoa-18",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 15.67,
+      "calcStoreQuantity": 13.248,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "192/804",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "12.6",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
           "key": "isWeighted",
           "value": "",
           "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19.6",
-          "name": "Білки",
           "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "price",
-          "Value": 8.2
+          "Value": 29.9
         },
         {
           "Type": "priceOpt",
-          "Value": 8.2
+          "Value": 29.9
         }
       ],
       "promotions": null,
-      "rating": 5.0,
-      "votesCount": 1,
+      "rating": 4.2,
+      "votesCount": 5,
       "complexSku": null,
-      "quantity": 15.67,
+      "quantity": 13.248,
       "highlight": "",
       "techParameters": null
     },
     {
-      "sets": null,
+      "sets": [
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 14,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2499,7 +2605,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2508,7 +2614,7 @@
           "slug": null
         },
         {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -2517,505 +2623,158 @@
           "slug": null
         }
       ],
-      "id": 675127,
-      "name": "Курячий шніцель з філе охолоджене",
-      "unit": "100г",
-      "price": 20.4,
+      "id": 32555,
+      "name": "Кокос",
+      "unit": "шт",
+      "price": 29.99,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/67/480x480wwm/675127_480x480wwm_857f7d3e-f78d-3ed3-debe-79cabfed3268.png",
-      "division": 0.5,
-      "promotion": null,
-      "slug": "kuriachyi-shnitsel-z-file-okholodzhene-675127",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 200.0,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "98/410",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "2.4",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Без ТМ",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 20.4
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 20.4
-        }
-      ],
-      "promotions": null,
-      "rating": 3.8,
-      "votesCount": 4,
-      "complexSku": null,
-      "quantity": 200.0,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4418,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4427,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 67679,
-      "name": "Індича гомілка охолоджена",
-      "unit": "100г",
-      "price": 12.4,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/6/480x480wwm/67679_480x480wwm_91a0d840-eb2b-60f0-4dc0-30aeccbabf50.png",
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/3/480x480wwm/32555_480x480wwm_71eac398-50aa-a13f-187a-7e24e2cc957d.png",
       "division": 1.0,
       "promotion": null,
-      "slug": "indycha-gomilka-okholodzhena-67679",
+      "slug": "kokos-32555",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 200.0,
+      "calcStoreQuantity": 12.0,
       "ecoPacking": false,
-      "recommendationBlockName": null,
+      "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
-          "key": "calorie",
-          "value": "141/591",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
           "key": "country",
-          "value": "Україна",
+          "value": "Кот-д'Івуар",
           "name": "Країна",
           "valueId": null
         },
         {
-          "key": "fats",
-          "value": "6.8",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "19.9",
-          "name": "Білки",
+          "key": "description for silpo.ua/MA",
+          "value": "Кокос, він же кокосовий горіх - це популярний плід кокосової пальми, рослини із сімейства пальмових. Це округла кістянка, вкрита товстим шаром волокон. Усередині кістянки знаходиться «горіх», який представляє собою їстівну порожнисту м`якоть з деякою кількістю солодкуватої рідини - кокосової води. В їжу вживають кокосове молоко і білу м`якоть кокоса. Їх широко застосовують в кулінарії для приготування десертів і напоїв, а також в сфері виробництва косметичних засобів. Кокос багатий вітамінами і мінеральними елементами, має безліч корисних властивостей для організму людини.",
+          "name": "Маркетинговий опис продукту для сайту/МП",
           "valueId": null
         }
       ],
       "prices": [
         {
           "Type": "price",
-          "Value": 12.4
+          "Value": 29.99
         },
         {
           "Type": "priceOpt",
-          "Value": 12.4
+          "Value": 29.99
+        }
+      ],
+      "promotions": null,
+      "rating": 3.0,
+      "votesCount": 28,
+      "complexSku": null,
+      "quantity": 12.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": [
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 91,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 183084,
+      "name": "Гранаділла",
+      "unit": "шт",
+      "price": 99.0,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/18/480x480wwm/183084_480x480wwm_6abedfdb-9eb8-88de-0900-36d57cf3ed6d.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "granadilla-183084",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 12.0,
+      "ecoPacking": false,
+      "recommendationBlockName": "Рекомендації",
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Колумбія",
+          "name": "Країна",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 99.0
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 99.0
         }
       ],
       "promotions": null,
       "rating": 4.4,
-      "votesCount": 7,
+      "votesCount": 5,
       "complexSku": null,
-      "quantity": 200.0,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 834544,
-      "name": "Курячі стріпси нарізні",
-      "unit": "100г",
-      "price": 20.4,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/83/480x480wwm/834544_480x480wwm_a64f4291-e6a7-2707-1dbe-a169fa93e42a.png",
-      "division": 0.5,
-      "promotion": null,
-      "slug": "kuriachi-stripsy-narizni-834544",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 200.0,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "108/454",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "2.6",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "21.2",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Без ТМ",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 20.4
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 20.4
-        }
-      ],
-      "promotions": null,
-      "rating": 4.0,
-      "votesCount": 4,
-      "complexSku": null,
-      "quantity": 200.0,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 920639,
-      "name": "М'ясо грудної част тушки курячої Наша Ряба су-від",
-      "unit": "100г",
-      "price": 29.9,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/92/480x480wwm/920639_480x480wwm_2565a44a-0b2a-f963-b425-14b44cf551a5.png",
-      "division": 0.1,
-      "promotion": null,
-      "slug": "m-iaso-grudnoi-chast-tushky-kuriachoi-nasha-riaba-su-vid-920639",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 14.2,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "125/525",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0.0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "5.0",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "20.0",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Наша Ряба",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 29.9
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 29.9
-        }
-      ],
-      "promotions": null,
-      "rating": 4.7,
-      "votesCount": 11,
-      "complexSku": null,
-      "quantity": 14.2,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4428,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 469496,
-      "name": "Качка пекінська свіжоморожена",
-      "unit": "100г",
-      "price": 10.0,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/46/480x480wwm/469496_480x480wwm_54948a5f-70d2-390b-43ea-b4a45808004e.png",
-      "division": 2.4,
-      "promotion": null,
-      "slug": "kachka-pekinska-svizhomorozhena-469496",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 23.755,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 10.0
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 10.0
-        }
-      ],
-      "promotions": null,
-      "rating": 3.4,
-      "votesCount": 12,
-      "complexSku": null,
-      "quantity": 23.755,
+      "quantity": 12.0,
       "highlight": "",
       "techParameters": null
     },
@@ -3026,7 +2785,7 @@
           "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
           "isMainPage": false,
           "isTab": false,
-          "order": 1049,
+          "order": 948,
           "filials": null,
           "deliveryData": [
             {
@@ -3053,7 +2812,7 @@
           "title": "Асортимент Днепровская набережная, 33а DARKSTORE",
           "isMainPage": false,
           "isTab": false,
-          "order": 1051,
+          "order": 950,
           "filials": null,
           "deliveryData": [
             {
@@ -3066,359 +2825,13 @@
             }
           ],
           "iconPath": null
-        }
-      ],
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
         },
         {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 807530,
-      "name": "Куряче стегно «Наша Ряба», лоток",
-      "unit": "100г",
-      "price": 16.9,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/80/480x480wwm/807530_480x480wwm_d246f921-c871-c8da-1ab3-7f557a68fa2a.png",
-      "division": 1.1,
-      "promotion": null,
-      "slug": "kuriache-stegno-nasha-riaba-lotok-807530",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 1.102,
-      "ecoPacking": false,
-      "recommendationBlockName": "Рекомендації",
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "191,0/800,3",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "15",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "14",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Наша Ряба",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 16.9
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 16.9
-        }
-      ],
-      "promotions": null,
-      "rating": 5.0,
-      "votesCount": 3,
-      "complexSku": null,
-      "quantity": 1.102,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4423,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 866207,
-      "name": "Стегно курки-бройлера «Наша Ряба» «Апетитна» «Айдахо» в томатному маринаді охолоджене",
-      "unit": "100г",
-      "price": 17.4,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/86/480x480wwm/866207_480x480wwm_e85c3d6c-7311-7498-aff9-64ab69593608.png",
-      "division": 1.0,
-      "promotion": null,
-      "slug": "stegno-kurky-broilera-nasha-riaba-apetytna-aidakho-v-tomatnomu-marynadi-okholodzhene-866207",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 22.464,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "189/794",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0.5",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "15.0",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "13.0",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Наша Ряба",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 17.4
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 17.4
-        }
-      ],
-      "promotions": null,
-      "rating": 4.0,
-      "votesCount": 6,
-      "complexSku": null,
-      "quantity": 22.464,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4428,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 791631,
-      "name": "Качине філе «Смачне каченя» заморожене",
-      "unit": "100г",
-      "price": 41.4,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/79/480x480wwm/791631_480x480wwm_065061e5-0d13-f7fb-c8cd-c3ab24df32c9.png",
-      "division": 0.1,
-      "promotion": null,
-      "slug": "kachyne-file-smachne-kachenia-zamorozhene-791631",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 2.916,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "184,2/771,8",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "11",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "21.3",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "Смачне каченя",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 41.4
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 41.4
-        }
-      ],
-      "promotions": null,
-      "rating": 4.4,
-      "votesCount": 8,
-      "complexSku": null,
-      "quantity": 2.916,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": [
-        {
-          "id": "yak_smachno_pryhotuvaty_kurcha_tabaka",
-          "title": "Як смачно приготувати курча табака",
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
           "isMainPage": false,
           "isTab": false,
-          "order": 5,
+          "order": 184,
           "filials": null,
           "deliveryData": [
             {
@@ -3443,7 +2856,7 @@
       ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3452,7 +2865,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3461,7 +2874,7 @@
           "slug": null
         },
         {
-          "id": 4426,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3470,59 +2883,71 @@
           "slug": null
         }
       ],
-      "id": 930303,
-      "name": "Курча Курка по-домашньому охолоджена",
-      "unit": "0,67кг",
-      "price": 89.99,
+      "id": 770236,
+      "name": "Кокос Drink&Eat",
+      "unit": "шт",
+      "price": 119.0,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/93/480x480wwm/930303_480x480wwm_31fbb7ea-e168-06f0-0331-6f1421006108.png",
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/77/480x480wwm/770236_480x480wwm_5641fe89-eb54-66f3-9edc-00bf42510b22.png",
       "division": 1.0,
       "promotion": null,
-      "slug": "kurcha-kurka-po-domashnomu-okholodzhena-930303",
+      "slug": "kokos-drink-eat-770236",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 8.0,
+      "calcStoreQuantity": 10.0,
       "ecoPacking": false,
       "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
           "key": "calorie",
-          "value": "238/1000",
+          "value": "373,7/1566,0",
           "name": "Енергетична цінність",
           "valueId": null
         },
         {
           "key": "carbohydrates",
-          "value": "0.0",
+          "value": "15.3",
           "name": "Вуглеводи",
           "valueId": null
         },
         {
           "key": "country",
-          "value": "Україна",
+          "value": "Таїланд",
           "name": "Країна",
           "valueId": null
         },
         {
+          "key": "description for silpo.ua/MA",
+          "value": "Кокос коктейльний – це дуже смачний продукт. Усередині нього найцінніше — це так зване молочко. Але й м'якоть кокосу тут заслуговує на окрему увагу. Вона настільки ніжна та м'яка, що її навіть порівнюють із цукерками «пташине молоко». Білий кокос потрібно вживати одразу ж, як ви його відкрили. М'якуш молодого кокосу зберігається дуже мало - всього пару днів. При цьому в цілому продукт може зберігатися дуже довго. Цікаво те, що внутрішня рідина у питного кокосу абсолютно стерильна, тому що товста шкірка просто нічого не пропускає всередину. Це чудовий натуральний, дуже смачний коктейль, який подарує вам безліч задоволення.",
+          "name": "Маркетинговий опис продукту для сайту/МП",
+          "valueId": null
+        },
+        {
           "key": "fats",
-          "value": "18.0",
+          "value": "33.6",
           "name": "Жири",
           "valueId": null
         },
         {
+          "key": "numberOfUnits",
+          "value": "1",
+          "name": "Кількість одиниць",
+          "valueId": null
+        },
+        {
           "key": "proteins",
-          "value": "19.0",
+          "value": "3.3",
           "name": "Білки",
           "valueId": null
         },
         {
           "key": "trademark",
-          "value": "Курка по-домашньому",
+          "value": "Без ТМ",
           "name": "Торгова марка",
           "valueId": null
         }
@@ -3530,26 +2955,54 @@
       "prices": [
         {
           "Type": "price",
-          "Value": 89.99
+          "Value": 119.0
         },
         {
           "Type": "priceOpt",
-          "Value": 77.99
+          "Value": 119.0
         }
       ],
       "promotions": null,
       "rating": 4.4,
-      "votesCount": 9,
+      "votesCount": 11,
       "complexSku": null,
-      "quantity": 8.0,
+      "quantity": 10.0,
       "highlight": "",
       "techParameters": null
     },
     {
-      "sets": null,
+      "sets": [
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 254,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3558,7 +3011,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3567,7 +3020,7 @@
           "slug": null
         },
         {
-          "id": 4428,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3576,65 +3029,53 @@
           "slug": null
         }
       ],
-      "id": 791630,
-      "name": "Качиний окіст «Смачне каченя» заморожений",
-      "unit": "100г",
-      "price": 27.9,
+      "id": 923046,
+      "name": "Манго Eat Me",
+      "unit": "шт",
+      "price": 129.0,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/79/480x480wwm/791630_480x480wwm_bf1b15be-3088-48bb-ddc6-66614589e070.png",
-      "division": 0.1,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/92/480x480wwm/923046_480x480wwm_10143221-6dcb-18cf-48ac-7bc156e0ec9b.png",
+      "division": 1.0,
       "promotion": null,
-      "slug": "kachynyi-okist-smachne-kachenia-zamorozhenyi-791630",
+      "slug": "mango-eat-me-923046",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 6.457,
+      "calcStoreQuantity": 24.0,
       "ecoPacking": false,
-      "recommendationBlockName": null,
+      "recommendationBlockName": "Рекомендації",
       "facings": null,
       "parameters": [
         {
           "key": "calorie",
-          "value": "412,4/1728,0",
+          "value": "4/17",
           "name": "Енергетична цінність",
           "valueId": null
         },
         {
           "key": "carbohydrates",
-          "value": "0",
+          "value": "1.0",
           "name": "Вуглеводи",
           "valueId": null
         },
         {
           "key": "country",
-          "value": "Україна",
+          "value": "Нідерланди",
           "name": "Країна",
           "valueId": null
         },
         {
-          "key": "fats",
-          "value": "38.8",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "isWeighted",
-          "value": "",
-          "name": "",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "15.8",
-          "name": "Білки",
+          "key": "numberOfUnits",
+          "value": "1",
+          "name": "Кількість одиниць",
           "valueId": null
         },
         {
           "key": "trademark",
-          "value": "Смачне каченя",
+          "value": "Eat Me",
           "name": "Торгова марка",
           "valueId": null
         }
@@ -3642,18 +3083,18 @@
       "prices": [
         {
           "Type": "price",
-          "Value": 27.9
+          "Value": 129.0
         },
         {
           "Type": "priceOpt",
-          "Value": 27.9
+          "Value": 129.0
         }
       ],
       "promotions": null,
-      "rating": 4.5,
-      "votesCount": 2,
+      "rating": 2.3,
+      "votesCount": 27,
       "complexSku": null,
-      "quantity": 6.457,
+      "quantity": 24.0,
       "highlight": "",
       "techParameters": null
     },
@@ -3661,7 +3102,7 @@
       "sets": null,
       "categories": [
         {
-          "id": 4411,
+          "id": 374,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3670,7 +3111,7 @@
           "slug": null
         },
         {
-          "id": 4412,
+          "id": 381,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3679,7 +3120,7 @@
           "slug": null
         },
         {
-          "id": 4428,
+          "id": 422,
           "parentId": null,
           "name": null,
           "iconPath": null,
@@ -3688,47 +3129,123 @@
           "slug": null
         }
       ],
-      "id": 527247,
-      "name": "Качиний окіст",
-      "unit": "100г",
-      "price": 25.4,
+      "id": 530102,
+      "name": "Тамаринд",
+      "unit": "шт",
+      "price": 129.0,
       "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/52/480x480wwm/527247_480x480wwm_fe6f9e77-09d8-9266-0de3-92143f9784a5.png",
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/53/480x480wwm/530102_480x480wwm_b31ce6c5-bc1e-19e3-5d81-ee61ed655207.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "tamarynd-530102",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 1.0,
+      "ecoPacking": false,
+      "recommendationBlockName": null,
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Таїланд",
+          "name": "Країна",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 129.0
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 129.0
+        }
+      ],
+      "promotions": null,
+      "rating": 5.0,
+      "votesCount": 2,
+      "complexSku": null,
+      "quantity": 1.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": null,
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 837328,
+      "name": "Хурма Рохо Брільянте",
+      "unit": "100г",
+      "price": 13.9,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/83/480x480wwm/837328_480x480wwm_b573f01f-e706-2ed0-c0ab-687573f66c45.png",
       "division": 0.25,
       "promotion": null,
-      "slug": "kachynyi-okist-527247",
+      "slug": "khurma-rokho-briliante-837328",
       "storeQuantity": 1.0,
       "promoId": null,
       "promoTitle": null,
       "bubbles": null,
       "priceStartFrom": null,
       "priceStopAfter": null,
-      "calcStoreQuantity": 1.79,
+      "calcStoreQuantity": 10.41,
       "ecoPacking": false,
       "recommendationBlockName": null,
       "facings": null,
       "parameters": [
         {
           "key": "calorie",
-          "value": "356/1494",
+          "value": "16/67",
           "name": "Енергетична цінність",
           "valueId": null
         },
         {
           "key": "carbohydrates",
-          "value": "0",
+          "value": "4",
           "name": "Вуглеводи",
           "valueId": null
         },
         {
           "key": "country",
-          "value": "Україна",
+          "value": "Іспанія",
           "name": "Країна",
           "valueId": null
         },
         {
           "key": "fats",
-          "value": "32.5",
+          "value": "0",
           "name": "Жири",
           "valueId": null
         },
@@ -3739,123 +3256,20 @@
           "valueId": null
         },
         {
-          "key": "proteins",
-          "value": "15.8",
-          "name": "Білки",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 25.4
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 25.4
-        }
-      ],
-      "promotions": null,
-      "rating": 3.0,
-      "votesCount": 2,
-      "complexSku": null,
-      "quantity": 1.79,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4423,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 935879,
-      "name": "Курча Курка по-домашньому Тапака зі спеціями охлаж",
-      "unit": "0,67кг",
-      "price": 104.0,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/93/480x480wwm/935879_480x480wwm_36a673a0-d490-a5ad-86f6-793efa22c37e.png",
-      "division": 1.0,
-      "promotion": null,
-      "slug": "kurcha-kurka-po-domashnomu-tapaka-zi-spetsiiamy-okhlazh-935879",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 19.0,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "195/819",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "0.0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "14.1",
-          "name": "Жири",
+          "key": "numberOfUnits",
+          "value": "1",
+          "name": "Кількість одиниць",
           "valueId": null
         },
         {
           "key": "proteins",
-          "value": "17.0",
+          "value": "0",
           "name": "Білки",
           "valueId": null
         },
         {
           "key": "trademark",
-          "value": "Курка по-домашньому",
+          "value": "Без ТМ",
           "name": "Торгова марка",
           "valueId": null
         }
@@ -3863,138 +3277,616 @@
       "prices": [
         {
           "Type": "price",
-          "Value": 104.0
+          "Value": 13.9
         },
         {
           "Type": "priceOpt",
-          "Value": 104.0
-        }
-      ],
-      "promotions": null,
-      "rating": 4.0,
-      "votesCount": 2,
-      "complexSku": null,
-      "quantity": 19.0,
-      "highlight": "",
-      "techParameters": null
-    },
-    {
-      "sets": null,
-      "categories": [
-        {
-          "id": 4411,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4412,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4423,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        },
-        {
-          "id": 4426,
-          "parentId": null,
-          "name": null,
-          "iconPath": null,
-          "order": 0,
-          "mobileAppIconPath": null,
-          "slug": null
-        }
-      ],
-      "id": 920638,
-      "name": "Курячі крильця М'ясторія Баффало охолоджені",
-      "unit": "500г",
-      "price": 239.0,
-      "oldPrice": null,
-      "mainImage": "https://content.silpo.ua/sku/ecommerce/92/480x480wwm/920638_480x480wwm_4b0e6076-daec-d7e0-60d7-edd908c164ae.png",
-      "division": 1.0,
-      "promotion": null,
-      "slug": "kuriachi-kryltsia-m-iastoriia-baffalo-okholodzheni-920638",
-      "storeQuantity": 1.0,
-      "promoId": null,
-      "promoTitle": null,
-      "bubbles": null,
-      "priceStartFrom": null,
-      "priceStopAfter": null,
-      "calcStoreQuantity": 14.0,
-      "ecoPacking": false,
-      "recommendationBlockName": null,
-      "facings": null,
-      "parameters": [
-        {
-          "key": "calorie",
-          "value": "299/1255",
-          "name": "Енергетична цінність",
-          "valueId": null
-        },
-        {
-          "key": "carbohydrates",
-          "value": "7.0",
-          "name": "Вуглеводи",
-          "valueId": null
-        },
-        {
-          "key": "country",
-          "value": "Україна",
-          "name": "Країна",
-          "valueId": null
-        },
-        {
-          "key": "fats",
-          "value": "20.4",
-          "name": "Жири",
-          "valueId": null
-        },
-        {
-          "key": "proteins",
-          "value": "21.8",
-          "name": "Білки",
-          "valueId": null
-        },
-        {
-          "key": "trademark",
-          "value": "М'ясторія",
-          "name": "Торгова марка",
-          "valueId": null
-        }
-      ],
-      "prices": [
-        {
-          "Type": "price",
-          "Value": 239.0
-        },
-        {
-          "Type": "priceOpt",
-          "Value": 239.0
+          "Value": 13.9
         }
       ],
       "promotions": null,
       "rating": 5.0,
       "votesCount": 3,
       "complexSku": null,
-      "quantity": 14.0,
+      "quantity": 10.41,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": null,
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 267538,
+      "name": "Папая Голд",
+      "unit": "100г",
+      "price": 29.9,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/26/480x480wwm/267538_480x480wwm_ec6f454d-1c3f-62da-a302-8ec0073f2bed.png",
+      "division": 0.25,
+      "promotion": null,
+      "slug": "papaia-gold-267538",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 2.966,
+      "ecoPacking": false,
+      "recommendationBlockName": null,
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Бразилія",
+          "name": "Країна",
+          "valueId": null
+        },
+        {
+          "key": "isWeighted",
+          "value": "",
+          "name": "",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 29.9
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 29.9
+        }
+      ],
+      "promotions": null,
+      "rating": 3.2,
+      "votesCount": 15,
+      "complexSku": null,
+      "quantity": 2.966,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": null,
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 137599,
+      "name": "Фізаліс, 100 г",
+      "unit": "шт",
+      "price": 69.99,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/13/480x480wwm/137599_480x480wwm_f0004a10-64a0-375b-e8b9-59d60470cb6b.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "fizalis-100-g-137599",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 12.0,
+      "ecoPacking": false,
+      "recommendationBlockName": null,
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Колумбія",
+          "name": "Країна",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 69.99
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 69.99
+        }
+      ],
+      "promotions": null,
+      "rating": 4.0,
+      "votesCount": 3,
+      "complexSku": null,
+      "quantity": 12.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": null,
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 477228,
+      "name": "Кокос свіжий",
+      "unit": "шт",
+      "price": 99.0,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/47/480x480wwm/477228_480x480wwm_ecf732e9-a426-2f1c-ee66-406942eff42e.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "kokos-svizhyi-477228",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 18.0,
+      "ecoPacking": false,
+      "recommendationBlockName": null,
+      "facings": null,
+      "parameters": [
+        {
+          "key": "description for silpo.ua/MA",
+          "value": "Кокос питний має ніжну м'якоть, що нагадує цукерки «пташине молоко» з характерним присмаком. Їсти її можна, не розжовуючи. Смак може бути як солодкий, так і з невеликою кислинкою. Кокосова вода має освіжаючий кисло-солодкий смак. Кокос очищений від верхнього шару шкірки, і «одягнений» в мікроперфоровану плівку, що має антипарові та біоруйнівні властивості. Плівка подовжує термін зберігання плода, при цьому захищає його від висихання.",
+          "name": "Маркетинговий опис продукту для сайту/МП",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 99.0
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 99.0
+        }
+      ],
+      "promotions": null,
+      "rating": 3.3,
+      "votesCount": 3,
+      "complexSku": null,
+      "quantity": 18.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": null,
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 249365,
+      "name": "Гуаява",
+      "unit": "шт",
+      "price": 119.0,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/24/480x480wwm/249365_480x480wwm_6490245b-bfae-0a51-0c32-8c15a65a09ae.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "guaiava-249365",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 10.0,
+      "ecoPacking": false,
+      "recommendationBlockName": null,
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Бразилія",
+          "name": "Країна",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 119.0
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 119.0
+        }
+      ],
+      "promotions": null,
+      "rating": 4.0,
+      "votesCount": 2,
+      "complexSku": null,
+      "quantity": 10.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": [
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 28,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 34604,
+      "name": "Ананас Голд",
+      "unit": "шт",
+      "price": 139.0,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/3/480x480wwm/34604_480x480wwm_bf6546c6-5a54-82ae-d69f-c3006dda8661.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "ananas-gold-34604",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 24.0,
+      "ecoPacking": false,
+      "recommendationBlockName": "Рекомендації",
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "Коста-Рика",
+          "name": "Країна",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 139.0
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 139.0
+        }
+      ],
+      "promotions": null,
+      "rating": 3.5,
+      "votesCount": 31,
+      "complexSku": null,
+      "quantity": 24.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": [
+        {
+          "id": "silpovo",
+          "title": "Сет під банер OVO",
+          "isMainPage": false,
+          "isTab": false,
+          "order": 72,
+          "filials": null,
+          "deliveryData": [
+            {
+              "type": 2,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            },
+            {
+              "type": 9,
+              "order": 0,
+              "isMainPage": false,
+              "isCheckout": false,
+              "isTab": false,
+              "filials": null
+            }
+          ],
+          "iconPath": null
+        }
+      ],
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 137605,
+      "name": "Пітахая жовта",
+      "unit": "шт",
+      "price": 199.0,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/13/480x480wwm/137605_480x480wwm_8e8b8303-731e-587f-19ad-823676350163.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "pitakhaia-zhovta-137605",
+      "storeQuantity": 1.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 1.0,
+      "ecoPacking": false,
+      "recommendationBlockName": "Рекомендації",
+      "facings": null,
+      "parameters": [
+        {
+          "key": "country",
+          "value": "В'єтнам",
+          "name": "Країна",
+          "valueId": null
+        },
+        {
+          "key": "description for silpo.ua/MA",
+          "value": "Пітахая жовта має злегка витягнуту форму жовтого кольору та з горбиками, на кінчиках яких можуть лишатися колючки, які природним станом відпадають в міру дозрівання плоду. Всередині вона біла та м’яка з темним насінням. На смак пітахая солодкувата, соковита, нагадує фруктовий сорбет зі смаком банана та ківі.",
+          "name": "Маркетинговий опис продукту для сайту/МП",
+          "valueId": null
+        }
+      ],
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 199.0
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 199.0
+        }
+      ],
+      "promotions": null,
+      "rating": 4.3,
+      "votesCount": 4,
+      "complexSku": null,
+      "quantity": 1.0,
+      "highlight": "",
+      "techParameters": null
+    },
+    {
+      "sets": null,
+      "categories": [
+        {
+          "id": 374,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 381,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        },
+        {
+          "id": 422,
+          "parentId": null,
+          "name": null,
+          "iconPath": null,
+          "order": 0,
+          "mobileAppIconPath": null,
+          "slug": null
+        }
+      ],
+      "id": 136811,
+      "name": "Авокадо елітне",
+      "unit": "шт",
+      "price": 54.99,
+      "oldPrice": null,
+      "mainImage": "https://content.silpo.ua/sku/ecommerce/13/480x480wwm/136811_480x480wwm_c6b69b77-5b45-743c-a61f-62fc5c90f199.png",
+      "division": 1.0,
+      "promotion": null,
+      "slug": "avokado-elitne-136811",
+      "storeQuantity": 0.0,
+      "promoId": null,
+      "promoTitle": null,
+      "bubbles": null,
+      "priceStartFrom": null,
+      "priceStopAfter": null,
+      "calcStoreQuantity": 0.0,
+      "ecoPacking": false,
+      "recommendationBlockName": null,
+      "facings": null,
+      "parameters": null,
+      "prices": [
+        {
+          "Type": "price",
+          "Value": 54.99
+        },
+        {
+          "Type": "priceOpt",
+          "Value": 54.99
+        }
+      ],
+      "promotions": null,
+      "rating": 3.4,
+      "votesCount": 28,
+      "complexSku": null,
+      "quantity": 0.0,
       "highlight": "",
       "techParameters": null
     }
   ],
-  "itemsCount": 53,
+  "itemsCount": 34,
   "EComError": {
     "ErrorId": "",
     "ErrorCode": 0,
@@ -4004,4 +3896,4 @@
   },
   "filials": null,
   "correction": null
-}
+}                                                                                                                                                madinaadzhigeldieva@MacBook-Pro-Madina product %

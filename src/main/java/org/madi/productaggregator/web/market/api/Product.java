@@ -5,6 +5,7 @@ public interface Product {
     String getName();
     Double getPrice();
     Boolean isAvailable();
+    String getCategoryId();
     String getSiteUrl();
     String getImageUrl();
 }

@@ -14,11 +14,11 @@ public class AggregatorProductEntity {
     @Id
     @Column(name = "id")
     private Long id;
-    @Column(name = "name")
+    @Column(name = "name", length = 512, nullable = false)
     private String name;
-    @Column(name = "category_id")
+    @Column(name = "category_id", nullable = false)
     private Long categoryId;
-    @Column(name = "image_url")
+    @Column(name = "image_url", length = 1024)
     private String imageUrl;
     @OneToMany(mappedBy="aggregatorProductEntity", fetch = FetchType.EAGER)
     private List<ProductEntity> productEntities;

@@ -16,11 +16,11 @@ public class MarketEntity {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name")
+    @Column(name = "name", length = 512, nullable = false)
     private String name;
-    @Column(name = "logo_url")
+    @Column(name = "logo_url", length = 1024)
     private String logoUrl;
-    @Column(name = "domain_name")
+    @Column(name = "domain_name", length = 512, nullable = false)
     private String domainName;
     @OneToMany(mappedBy="marketEntity", fetch = FetchType.EAGER)
     private List<ProductEntity> productEntities;
