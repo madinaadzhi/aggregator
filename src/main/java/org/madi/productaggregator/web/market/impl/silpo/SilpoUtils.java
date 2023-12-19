@@ -24,9 +24,9 @@ public class SilpoUtils {
             String externalId = String.valueOf(items.getJSONObject(i).get("id"));
             String name = items.getJSONObject(i).getString("name");
             double price = items.getJSONObject(i).getDouble("price");
-            double quantity = Double.parseDouble(items.getJSONObject(i).getString("quantity"));
+            int quantity = items.getJSONObject(i).getInt("quantity");
             Boolean isAvailable = quantity > 0;
-            String categoryId = categories.getJSONObject(categories.length() - 1).getString("id");
+            String categoryId = String.valueOf(categories.getJSONObject(categories.length() - 1).getInt("id"));
             String siteUrl = "https://shop.silpo.ua/product/" + externalId;
             String imageUrl = items.getJSONObject(i).getString("mainImage");
             SilpoProduct product = new SilpoProduct(externalId, name, price, isAvailable, categoryId, siteUrl, imageUrl);

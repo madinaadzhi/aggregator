@@ -101,7 +101,7 @@ public class SilpoMarketApi implements MarketApi {
                 products.addAll(productList);
                 if (iteration == 1) {
                     JSONObject jsonObject = new JSONObject(json);
-                    expectedProductCnt = Integer.parseInt(jsonObject.getString("itemsCount"));
+                    expectedProductCnt = jsonObject.getInt("itemsCount");
                     log.info("[{}] Category {} contains {} products ", getMarketInfo().getName(), categoryId, expectedProductCnt);
                 }
                 if (fetchedProductCnt == expectedProductCnt) {

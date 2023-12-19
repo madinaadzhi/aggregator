@@ -18,7 +18,7 @@ public class ProductEntity {
     @Column(name = "name", length = 512, nullable = false)
     private String name;
     @Column(name = "category_id", nullable = false)
-    private String categoryId;
+    private Long categoryId;
     @Column(name = "price", nullable = false)
     private Double price;
     @Column(name = "is_available", nullable = false)

@@ -1,6 +1,7 @@
 package org.madi.productaggregator.web.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.madi.productaggregator.web.dao.CategoryRepository;
 import org.madi.productaggregator.web.dao.MarketRepository;
 import org.madi.productaggregator.web.dao.ProductRepository;
@@ -14,8 +15,6 @@ import org.madi.productaggregator.web.market.api.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.net.http.HttpConnectTimeoutException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,6 +38,7 @@ public class MarketImportService {
         if (market == null) {
             log.info("[{}] Saving market to DB ", domainName);
             saveMarket(marketApi);
+            market = marketRepository.findMarketEntitiesByDomainName(domainName);
         } else {
             log.info("Market already has been imported");
         }
@@ -117,10 +117,16 @@ public class MarketImportService {
                 String name = product.getName();
                 double price = product.getPrice();
                 Boolean isAvailable = product.isAvailable();
-                String categoryId = product.getCategoryId();
+                String externalCategoryId = product.getCategoryId();
                 String siteUrl = product.getSiteUrl();
                 String imageUrl = product.getImageUrl();
 
+               if (! StringUtils.isNumeric(externalCategoryId)) {
+                   log.warn("{} is not a valid category id. ignoring product {}", externalCategoryId, product.getName());
+                   continue;
+               }
+
+                Long categoryId = categoryRepository.getCategoryEntityByExternalIdAndMarketId(externalCategoryId, marketEntity.getId()).getId();
                 ProductEntity productEntity = new ProductEntity();
                 productEntity.setExternalId(externalId);
                 productEntity.setName(name);

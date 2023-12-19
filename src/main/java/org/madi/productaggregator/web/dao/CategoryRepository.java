@@ -11,4 +11,5 @@ public interface CategoryRepository extends CrudRepository<CategoryEntity, Long>
     List<CategoryEntity> getCategoryEntitiesByMarketId(Long marketId);
     List<CategoryEntity> getCategoryEntitiesByMarketIdAndIsImportedFalse(Long marketId);
     int countByMarketId(Long marketId);
+    CategoryEntity getCategoryEntityByExternalIdAndMarketId(String externalId, Long marketId);
 }
