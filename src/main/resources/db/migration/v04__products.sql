@@ -4,7 +4,7 @@ create table product
         primary key,
     category_id     bigint        not null,
     external_id     varchar(1024) not null,
-    image_url       varchar(1024) null,
+    image_url       varchar(256) null,
     is_available    bit           not null,
     name            varchar(512)  not null,
     price           double        not null,
@@ -17,3 +17,4 @@ create table product
         foreign key (market_id) references markets (id)
 );
 
+create index products_image_url on product(image_url);
