@@ -22,17 +22,51 @@ public class AggregateProductController {
     private CategoryRepository categoryRepository;
 
     @GetMapping("products")
-    public String list(@RequestParam Long categoryId, @RequestParam int pageSize, @RequestParam int activePage, Model model) {
+    public String list(@RequestParam(required = false) Long categoryId, @RequestParam int pageSize, @RequestParam int activePage,
+                       @RequestParam(required = false) String productName, Model model) {
         Optional<CategoryEntity> category = categoryRepository.findById(categoryId);
+        List<Long> childCategoryIds = getChildCategoryIds(category.get());
+        List<CategoryEntity> parentCategories = getParentCategories(category.get());
+        parentCategories.add(category.get());
         Pageable paging = PageRequest.of(activePage - 1, pageSize);
-        List<AggregatorProductEntity> aggregatorProductEntitiesByCategoryId = aggregatorProductRepository.findAggregatorProductEntitiesByCategoryId(categoryId, paging);
-        List<AggregatorProductEntity> allAggregatorProductEntitiesByCategoryId = aggregatorProductRepository.findAggregatorProductEntitiesByCategoryId(categoryId);
-        model.addAttribute("title", category.get().getName());
-        model.addAttribute("categoryId", category.get().getId());
-        model.addAttribute("prods", aggregatorProductEntitiesByCategoryId);
+        List<AggregatorProductEntity> aggregatorProductEntities;
+        int aggProdCount;
+        if (productName != null) {
+            String productNameTempl = "%" + productName + "%";
+            aggregatorProductEntities = aggregatorProductRepository.findAggregatorProductEntitiesByCategoryIdInAndNameLike(childCategoryIds, productNameTempl, paging);
+            aggProdCount = aggregatorProductRepository.countByCategoryIdInAndNameLike(childCategoryIds, productNameTempl);
+        } else {
+            aggregatorProductEntities = aggregatorProductRepository.findAggregatorProductEntitiesByCategoryIdIn(childCategoryIds, paging);
+            aggProdCount = aggregatorProductRepository.countByCategoryIdIn(childCategoryIds);
+        }
+
+        model.addAttribute("aggProdCount", aggProdCount);
+        model.addAttribute("productName", productName);
+        model.addAttribute("category", category.get());
+        model.addAttribute("prods", aggregatorProductEntities);
         model.addAttribute("pageSize", pageSize);
         model.addAttribute("activePage", activePage);
-        model.addAttribute("pages", PagingUtil.buildPageNavItem(pageSize, allAggregatorProductEntitiesByCategoryId.size(), activePage));
+        model.addAttribute("parentCategories", parentCategories);
+        model.addAttribute("pages", PagingUtil.buildPageNavItem(pageSize, aggProdCount, activePage));
         return "aggregate-products";
+    }
+
+    private List<CategoryEntity> getParentCategories(CategoryEntity category) {
+        List<CategoryEntity> parentCategories = new ArrayList<>();
+        while (category.getParentId() != null) {
+            parentCategories.add(0, category.getParentCategory());
+            category = category.getParentCategory();
+        }
+        return parentCategories;
+    }
+
+    private List<Long> getChildCategoryIds(CategoryEntity category) {
+        List<Long> ids = new ArrayList<>();
+        ids.add(category.getId());
+        for (CategoryEntity childCategory : category.getChildCategories()) {
+            ids.add(childCategory.getId());
+            ids.addAll(getChildCategoryIds(childCategory));
+        }
+        return ids;
     }
 }
