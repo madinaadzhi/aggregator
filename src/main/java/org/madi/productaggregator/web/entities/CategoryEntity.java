@@ -23,9 +23,12 @@ public class CategoryEntity {
     private String externalId;
     @Column(name = "logo_url", length = 1024)
     private String logoUrl;
-    @OneToMany(mappedBy="parentId", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "parentId", fetch = FetchType.EAGER)
     private List<CategoryEntity> childCategories;
-    @Column(name="is_imported",nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "parent_id", updatable = false, insertable = false)
+    private CategoryEntity parentCategory;
+    @Column(name = "is_imported", nullable = false)
     private boolean isImported;
 //    @ManyToOne
 //    @JoinColumn(name = "market_id")
