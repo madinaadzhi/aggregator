@@ -7,13 +7,16 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+<div th:insert="~{header :: header}" style="margin-left: -1.5rem"></div>
 <div class="container text-start">
-    <div class="row mt-0 gy-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <div class="row mt-1 gy-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
         <div th:each="parentCategory : ${parentCategories}" class="list-group">
-            <a href="#" class="list-group-item list-group-item-action" style="font-weight: bold">
+            <a th:href="@{/products(categoryId=${parentCategory.id}, pageSize=${9}, activePage=${1})}" class="list-group-item list-group-item-action"
+               style="font-weight: bold">
                 <img th:src="${parentCategory.logoUrl}" th:text="${parentCategory.name}" class="img-fluid"
                      style="max-height: 25px; margin-right: 10px"></a>
-            <a href="#" th:each="childCategory : ${parentCategory.childCategories}" th:text="${childCategory.name}"
+            <a th:each="childCategory : ${parentCategory.childCategories}"
+               th:href="@{/products(categoryId=${childCategory.id}, pageSize=${9}, activePage=${1})}" th:text="${childCategory.name + ' (' + childCategory.childCategories.size() + ')'}"
                class="list-group-item list-group-item-action"></a>
         </div>
     </div>
