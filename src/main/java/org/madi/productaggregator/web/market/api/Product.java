@@ -8,4 +8,5 @@ public interface Product {
     String getCategoryId();
     String getSiteUrl();
     String getImageUrl();
+    String getUnit();
 }

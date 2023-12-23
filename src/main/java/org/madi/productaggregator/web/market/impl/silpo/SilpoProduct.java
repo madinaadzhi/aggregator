@@ -14,6 +14,7 @@ public class SilpoProduct implements Product {
     private String categoryId;
     private String siteUrl;
     private String imageUrl;
+    private String unit;
 
     @Override
     public String getId() {
@@ -48,5 +49,9 @@ public class SilpoProduct implements Product {
     @Override
     public String getImageUrl() {
         return imageUrl;
+    }
+    @Override
+    public String getUnit() {
+        return unit;
     }
 }

@@ -6,14 +6,17 @@ import org.madi.productaggregator.web.service.MarketImportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+        WebMvcAutoConfiguration.class})
 @Slf4j
 public class ImportMarket implements CommandLineRunner {
 
@@ -24,7 +27,9 @@ public class ImportMarket implements CommandLineRunner {
     private MarketImportService marketImportService;
 
     public static void main(String[] args) {
-        SpringApplication.run(ImportMarket.class, args);
+        SpringApplication application = new SpringApplication(ImportMarket.class);
+        application.setWebApplicationType(WebApplicationType.NONE);
+        application.run(args);
     }
 
     @Override

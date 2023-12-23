@@ -28,7 +28,8 @@ public class ForaUtils {
             String categoryId = String.valueOf(categories.getJSONObject(categories.length() - 1).getInt("id"));
             String siteUrl = "https://shop.fora.ua/product/" + externalId;
             String imageUrl = items.getJSONObject(i).getString("mainImage");
-            ForaProduct product = new ForaProduct(externalId, name, price, quantity > 0, categoryId, siteUrl, imageUrl);
+            String unit = items.getJSONObject(i).getString("unit");
+            ForaProduct product = new ForaProduct(externalId, name, price, quantity > 0, categoryId, siteUrl, imageUrl, unit);
             products.add(product);
         }
         return products;

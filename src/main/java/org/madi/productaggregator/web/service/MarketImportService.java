@@ -55,10 +55,32 @@ public class MarketImportService {
 
         while (true) {
             try {
-                saveProducts(marketApi);
+                saveProducts(marketApi, true);
                 break;
             } catch (Exception e) {
-                log.warn("Error occurred during import process. Waiting 1 minute to retry. Details: {}", e.getMessage(),e);
+                log.warn("Error occurred during import process. Waiting 1 minute to retry. Details: {}", e.getMessage());
+                try {
+                    Thread.sleep(60 * 1000);
+                } catch (InterruptedException ex) {
+                }
+            }
+        }
+        log.info("[{}] Done ", domainName);
+        log.info("[{}] Add products to aggregator", domainName);
+        productRepository.linkProductWithAggrProduct(market.getId());
+        log.info("[{}] Done ", domainName);
+    }
+
+    public void updatePrice(MarketApi marketApi) {
+        String domainName = marketApi.getMarketInfo().getDomainName();
+        log.info("[{}] Updating price ", domainName);
+
+        while (true) {
+            try {
+                saveProducts(marketApi, false);
+                break;
+            } catch (Exception e) {
+                log.warn("Error occurred during price update. Waiting 1 minute to retry. Details: {}", e.getMessage(), e);
                 try {
                     Thread.sleep(60 * 1000);
                 } catch (InterruptedException ex) {
@@ -101,17 +123,17 @@ public class MarketImportService {
         }
     }
 
-    private void saveProducts(MarketApi marketApi) {
+    private void saveProducts(MarketApi marketApi, boolean isImport) {
         Market marketInfo = marketApi.getMarketInfo();
         MarketEntity marketEntity = marketRepository.findMarketEntitiesByDomainName(marketInfo.getDomainName());
 
-        List<CategoryEntity> notImportedCategories = getNotImportedCategories(marketEntity.getId());
-        log.info("[{}] Found {} categories ", marketInfo.getName(), notImportedCategories.size());
-        for (int i = 0; i < notImportedCategories.size(); i++) {
-            CategoryEntity notImportedCategory = notImportedCategories.get(i);
+        List<CategoryEntity> categoriesForProcessing = getCategories(marketEntity, isImport);
+        log.info("[{}] Found {} categories ", marketInfo.getName(), categoriesForProcessing.size());
+        for (int i = 0; i < categoriesForProcessing.size(); i++) {
+            CategoryEntity notProcessedCategory = categoriesForProcessing.get(i);
             log.info("[{}] {} of {} category is being processed. Category Id: {} ",
-                    marketInfo.getName(), i + 1, notImportedCategories.size(), notImportedCategory.getId());
-            List<Product> products = marketApi.getProducts(notImportedCategory.getExternalId());
+                    marketInfo.getName(), i + 1, categoriesForProcessing.size(), notProcessedCategory.getId());
+            List<Product> products = marketApi.getProducts(notProcessedCategory.getExternalId());
             for (Product product : products) {
                 String externalId = product.getId();
                 String name = product.getName();
@@ -120,27 +142,62 @@ public class MarketImportService {
                 String externalCategoryId = product.getCategoryId();
                 String siteUrl = product.getSiteUrl();
                 String imageUrl = product.getImageUrl();
+                String unit = product.getUnit();
 
-               if (! StringUtils.isNumeric(externalCategoryId)) {
-                   log.warn("{} is not a valid category id. ignoring product {}", externalCategoryId, product.getName());
-                   continue;
-               }
+                if (!StringUtils.isNumeric(externalCategoryId)) {
+                    log.warn("{} is not a valid category id. ignoring product {}", externalCategoryId, product.getName());
+                    continue;
+                }
 
-                Long categoryId = categoryRepository.getCategoryEntityByExternalIdAndMarketId(externalCategoryId, marketEntity.getId()).getId();
-                ProductEntity productEntity = new ProductEntity();
-                productEntity.setExternalId(externalId);
-                productEntity.setName(name);
-                productEntity.setPrice(price);
-                productEntity.setAvailable(isAvailable);
-                productEntity.setCategoryId(categoryId);
-                productEntity.setSiteUrl(siteUrl);
-                productEntity.setImgUrl(imageUrl);
-                productEntity.setMarketEntity(marketEntity);
-
-                productRepository.save(productEntity);
+                if (isImport) {
+                    Long categoryId = categoryRepository.getCategoryEntityByExternalIdAndMarketId(externalCategoryId, marketEntity.getId()).getId();
+                    ProductEntity productEntity = new ProductEntity();
+                    productEntity.setExternalId(externalId);
+                    productEntity.setName(name);
+                    productEntity.setPrice(price);
+                    productEntity.setAvailable(isAvailable);
+                    productEntity.setCategoryId(categoryId);
+                    productEntity.setSiteUrl(siteUrl);
+                    productEntity.setImgUrl(imageUrl);
+                    productEntity.setMarketEntity(marketEntity);
+                    productEntity.setUnit(unit);
+                    try {
+                        productRepository.save(productEntity);
+                    } catch (Exception e) {
+                        log.info("[{}] could not persist product {} ",
+                                marketInfo.getName(), productEntity, e);
+                    }
+                } else {
+                    try {
+                        ProductEntity persistedProduct = productRepository.findProductEntityByMarketEntityIdAndExternalId(marketEntity.getId(), externalId);
+                        if (persistedProduct != null) {
+                            if (!persistedProduct.getPrice().equals(price) || persistedProduct.isAvailable() == isAvailable) {
+                                log.info("[{}] updating product {}. Changed price from {} to {}. Changed availability from {} to {}",
+                                        marketInfo.getName(), externalId, persistedProduct.getPrice(), price, persistedProduct.isAvailable(), isAvailable);
+                                persistedProduct.setPrice(price);
+                                persistedProduct.setAvailable(isAvailable);
+                                productRepository.save(persistedProduct);
+                            }
+                        } else {
+                            log.info("[{}] there is no product {} in the DB",
+                                    marketInfo.getName(), externalId);
+                        }
+                    } catch (Exception e) {
+                        log.info("[{}] could not update product {} ",
+                                marketInfo.getName(), externalId, e);
+                    }
+                }
             }
-            notImportedCategory.setImported(true);
-            categoryRepository.save(notImportedCategory);
+            notProcessedCategory.setImported(true);
+            categoryRepository.save(notProcessedCategory);
+        }
+    }
+
+    private List<CategoryEntity> getCategories(MarketEntity marketEntity, boolean isImport) {
+        if (isImport) {
+            return getNotImportedCategories(marketEntity.getId());
+        } else {
+            return categoryRepository.getCategoryEntitiesByMarketId(marketEntity.getId());
         }
     }
 

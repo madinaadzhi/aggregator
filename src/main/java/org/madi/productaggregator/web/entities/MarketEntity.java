@@ -22,6 +22,6 @@ public class MarketEntity {
     private String logoUrl;
     @Column(name = "domain_name", length = 512, nullable = false)
     private String domainName;
-    @OneToMany(mappedBy="marketEntity", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="marketEntity", fetch = FetchType.LAZY)
     private List<ProductEntity> productEntities;
 }

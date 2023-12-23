@@ -16,7 +16,7 @@ import java.util.List;
 
 import static org.madi.productaggregator.web.market.impl.silpo.SilpoUtils.getProductPageByCategoryId;
 
-@Service
+@Service("SilpoMarketApi")
 @Slf4j
 public class SilpoMarketApi implements MarketApi {
     private static final String URL = "https://api.catalog.ecom.silpo.ua/api/2.0/exec/EcomCatalogGlobal";

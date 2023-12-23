@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Service
+@Service("ForaMarketApi")
 @Slf4j
 public class ForaMarketApi implements MarketApi {
     private static final String URL = "https://api.catalog.ecom.fora.ua/api/2.0/exec/EcomCatalogGlobal";

@@ -8,6 +8,7 @@ import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 @Entity
 @Table(name = "Product")
 public class ProductEntity {
@@ -35,4 +36,6 @@ public class ProductEntity {
     private MarketEntity marketEntity;
     @Column(name = "external_id", length = 1024, nullable = false)
     private String externalId;
+    @Column(name = "unit", length = 256, nullable = false)
+    private String unit;
 }
