@@ -18,7 +18,7 @@
             let activePage = document.getElementById('activePage').value;
             let productNamePattern = document.getElementById('name').value;
 
-            let url = 'http://localhost:8080/products?categoryId=' + categoryId + '&pageSize=' + pageSize +
+            let url = '/products?categoryId=' + categoryId + '&pageSize=' + pageSize +
                 '&activePage=' + activePage + '&productName=' + productNamePattern;
             window.open(url, "_self")
         }
@@ -99,16 +99,16 @@
     <ul class="pagination justify-content-center mt-3">
         <li class="page-item" th:classappend="${activePage == 1 ? 'disabled' : ''}">
             <a class="page-link"
-               th:href="@{http://localhost:8080/products(categoryId=${category.id}, pageSize=${pageSize}, activePage=${activePage - 1}, productName=${productName})}">Previous</a>
+               th:href="@{/products(categoryId=${category.id}, pageSize=${pageSize}, activePage=${activePage - 1}, productName=${productName})}">Previous</a>
         </li>
         <li th:each="page : ${pages}" class="page-item" th:classappend="${page.isActive ? 'active' : ''}">
             <a th:text="${page.pageNumber}" class="page-link"
-               th:href="@{http://localhost:8080/products(categoryId=${category.id}, pageSize=${pageSize}, activePage=${page.pageNumber}, productName=${productName})}"></a>
+               th:href="@{/products(categoryId=${category.id}, pageSize=${pageSize}, activePage=${page.pageNumber}, productName=${productName})}"></a>
         </li>
         </li>
         <li class="page-item" th:classappend="${activePage == pages.size() ? 'disabled' : ''}">
             <a class="page-link"
-               th:href="@{http://localhost:8080/products(categoryId=${category.id}, pageSize=${pageSize}, activePage=${activePage + 1}, productName=${productName})}">Next</a>
+               th:href="@{/products(categoryId=${category.id}, pageSize=${pageSize}, activePage=${activePage + 1}, productName=${productName})}">Next</a>
         </li>
     </ul>
 </nav>

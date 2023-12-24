@@ -22,7 +22,7 @@ public class AggregateProductController {
     private CategoryRepository categoryRepository;
 
     @GetMapping("products")
-    public String list(@RequestParam(required = false) Long categoryId, @RequestParam int pageSize, @RequestParam int activePage,
+    public String list(@RequestParam Long categoryId, @RequestParam int pageSize, @RequestParam int activePage,
                        @RequestParam(required = false) String productName, Model model) {
         Optional<CategoryEntity> category = categoryRepository.findById(categoryId);
         List<Long> childCategoryIds = getChildCategoryIds(category.get());
