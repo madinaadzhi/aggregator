@@ -36,6 +36,10 @@
                 }
             }
         }
+
+        function addCategory() {
+            window.open('/admin/categories/new', "_self")
+        }
     </script>
 </head>
 <body>
@@ -44,7 +48,7 @@
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 1rem">Категорії</h2>
 
 <div class="d-flex justify-content-start" style="margin-left: 40px; margin-top: 2rem">
-    <button type="button" class="btn btn-outline-dark" style="width: 7rem">Додати</button>
+    <button type="button" class="btn btn-outline-dark" style="width: 7rem" onclick="addCategory()">Додати</button>
     <input class="ms-2 input" id="filter" onkeyup="filter()"/>
 </div>
 

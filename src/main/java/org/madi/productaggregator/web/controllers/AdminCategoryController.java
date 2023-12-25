@@ -26,17 +26,20 @@ public class AdminCategoryController {
     }
 
     @GetMapping("/admin/categories/{categoryId}")
-    public String editView(Model model, @PathVariable Long categoryId,
-
+    public String editView(Model model, @PathVariable String categoryId,
                            @RequestParam(required = false) Boolean success) {
-        CategoryEntity category = categoryRepository.findById(categoryId).get();
+        CategoryEntity category;
+        if (categoryId.equals("new")) {
+            category = new CategoryEntity();
+        } else {
+            category = categoryRepository.findById(Long.valueOf(categoryId)).get();
+        }
         List<CategoryEntity> parentCategories = categoryRepository.getCategoryEntitiesByMarketIdAndParentIdIsNull(aggrMarketId);
         List<CategoryEntity> categories = buildCategories(parentCategories);
         model.addAttribute("category", category);
         model.addAttribute("categories", categories);
         if (success != null && success) {
             model.addAttribute("success", success);
-
         }
         return "admin-edit-categories";
     }
@@ -48,12 +51,19 @@ public class AdminCategoryController {
         if (parentId == -1) {
             parentId = null;
         }
-        CategoryEntity category = categoryRepository.findById(categoryId).get();
+        CategoryEntity category;
+        if (categoryId == -1) {
+            category = new CategoryEntity();
+            category.setExternalId("none");
+            category.setMarketId(aggrMarketId);
+        } else {
+            category = categoryRepository.findById(categoryId).get();
+        }
         category.setParentId(parentId);
         category.setName(name);
-        categoryRepository.save(category);
+        CategoryEntity saved = categoryRepository.save(category);
 
-        return "redirect:/admin/categories/" + categoryId + "?success=true";
+        return "redirect:/admin/categories/" + saved.getId() + "?success=true";
     }
 
 
