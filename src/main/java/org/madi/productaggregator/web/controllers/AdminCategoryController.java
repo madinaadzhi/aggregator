@@ -18,10 +18,13 @@ public class AdminCategoryController {
     @Value("${aggregator.market.id}")
     private Long aggrMarketId;
     @GetMapping("/admin/categories")
-    public String list(Model model) {
+    public String list(Model model, @RequestParam(required = false) Boolean error) {
         List<CategoryEntity> parentCategories = categoryRepository.getCategoryEntitiesByMarketIdAndParentIdIsNull(aggrMarketId);
         List<CategoryEntity> categories = buildCategories(parentCategories);
         model.addAttribute("categories", categories);
+        if (error != null && error) {
+            model.addAttribute("error", error);
+        }
         return "admin-categories";
     }
 
@@ -46,8 +49,12 @@ public class AdminCategoryController {
 
     @GetMapping("/admin/categories/{categoryId}/delete")
     public String delete( @PathVariable Long categoryId) {
-        categoryRepository.deleteById(categoryId);
-        return "redirect:/admin/categories";
+        try {
+            categoryRepository.deleteById(categoryId);
+            return "redirect:/admin/categories";
+        } catch (Exception e) {
+            return "redirect:/admin/categories?error=true";
+        }
     }
 
     @PostMapping("/admin/categories/{categoryId}")
