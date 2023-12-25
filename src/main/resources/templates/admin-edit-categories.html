@@ -43,20 +43,26 @@
 <div th:include="admin-menu :: menu" ></div>
 
 <h2 style="margin-top: 13rem; margin-left: 5.2rem; margin-bottom: 1rem">Редагування категорії</h2>
-<div th:if="${success}" class="alert alert-success mx-" role="alert">
+<div th:if="${success}" class="alert alert-success mx-5" role="alert">
     Category was successfully updated!
 </div>
 <form th:action="@{/admin/categories/{id}(id=${category.getId()})}" method="post">
-    <input type="hidden" id="parentId" name="parentId" th:value="${category.getParentCategory() == null? category.getParentCategory().getId() :''}"/>
+    <input type="hidden" id="parentId" name="parentId" th:value="${category.getParentCategory() != null? category.getParentCategory().getId() :'-1'}"/>
 <div class="mb-3" style="margin-top: 2rem; margin-left: 5.2rem; width: 20rem;">
     <label for="name" class="form-label" style="font-weight: bold">Назва</label>
     <input type="text" th:value="${category.name}" class="form-control" id="name" name="name" style="margin-bottom: 2rem">
     <label for="name" class="form-label" style="font-weight: bold">Батьківська категорія</label>
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            <span id="parentCategoryName" th:text="${category.getParentCategory() == null? 'Корневая категория': category.getParentCategory().getName()}"> </span>
+            <span id="parentCategoryName" th:text="${category.getParentCategory() != null? category.getParentCategory().getName(): 'Корневая категория'}"> </span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
+            <li class="dropdown-item category-level-1">
+                <a  href="javascript://none"
+                   th:attr="onclick=|onSelect('-1', 'Корневая категория')|"
+                   style="color: black"
+                >Корневая категория</a>
+            </li>
             <li th:each="category : ${categories}" class="dropdown-item"
                 th:style="'margin-left:' + ${category.getLevel() * 20} + 'px'"
                 th:classappend="'category-level-' + ${category.getLevel() > 4? '4': category.getLevel()}">

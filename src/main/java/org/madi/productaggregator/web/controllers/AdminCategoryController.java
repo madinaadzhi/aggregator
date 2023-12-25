@@ -45,6 +45,9 @@ public class AdminCategoryController {
     public String edit( @PathVariable Long categoryId, @RequestParam Long parentId,
                         @RequestParam String name) {
 
+        if (parentId == -1) {
+            parentId = null;
+        }
         CategoryEntity category = categoryRepository.findById(categoryId).get();
         category.setParentId(parentId);
         category.setName(name);
