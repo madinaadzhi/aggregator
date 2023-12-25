@@ -26,12 +26,18 @@ public class AdminCategoryController {
     }
 
     @GetMapping("/admin/categories/{categoryId}")
-    public String editView(Model model, @PathVariable Long categoryId) {
+    public String editView(Model model, @PathVariable Long categoryId,
+
+                           @RequestParam(required = false) Boolean success) {
         CategoryEntity category = categoryRepository.findById(categoryId).get();
         List<CategoryEntity> parentCategories = categoryRepository.getCategoryEntitiesByMarketIdAndParentIdIsNull(aggrMarketId);
         List<CategoryEntity> categories = buildCategories(parentCategories);
         model.addAttribute("category", category);
         model.addAttribute("categories", categories);
+        if (success != null && success) {
+            model.addAttribute("success", success);
+
+        }
         return "admin-edit-categories";
     }
 
@@ -44,7 +50,7 @@ public class AdminCategoryController {
         category.setName(name);
         categoryRepository.save(category);
 
-        return "redirect:/admin/categories/" + categoryId;
+        return "redirect:/admin/categories/" + categoryId + "?success=true";
     }
 
 

@@ -43,6 +43,9 @@
 <div th:include="admin-menu :: menu" ></div>
 
 <h2 style="margin-top: 13rem; margin-left: 5.2rem; margin-bottom: 1rem">Редагування категорії</h2>
+<div th:if="${success}" class="alert alert-success mx-" role="alert">
+    Category was successfully updated!
+</div>
 <form th:action="@{/admin/categories/{id}(id=${category.getId()})}" method="post">
     <input type="hidden" id="parentId" name="parentId" th:value="${category.getParentCategory() == null? category.getParentCategory().getId() :''}"/>
 <div class="mb-3" style="margin-top: 2rem; margin-left: 5.2rem; width: 20rem;">
