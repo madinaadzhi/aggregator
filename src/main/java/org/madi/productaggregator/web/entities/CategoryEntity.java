@@ -33,4 +33,16 @@ public class CategoryEntity {
 //    @ManyToOne
 //    @JoinColumn(name = "market_id")
 //    private MarketEntity market;
+
+    public int getLevel() {
+        int level = 1;
+        CategoryEntity category = this;
+        while (category.getParentCategory() != null) {
+            level++;
+            category = category.getParentCategory();
+        }
+        return level;
+    }
+
+
 }
