@@ -23,7 +23,7 @@ public class CategoryEntity {
     private String externalId;
     @Column(name = "logo_url", length = 1024)
     private String logoUrl;
-    @OneToMany(mappedBy = "parentId", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "parentId", fetch = FetchType.EAGER, cascade = {CascadeType.REMOVE})
     private List<CategoryEntity> childCategories;
     @ManyToOne
     @JoinColumn(name = "parent_id", updatable = false, insertable = false)

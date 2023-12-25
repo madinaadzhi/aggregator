@@ -44,6 +44,12 @@ public class AdminCategoryController {
         return "admin-edit-categories";
     }
 
+    @GetMapping("/admin/categories/{categoryId}/delete")
+    public String delete( @PathVariable Long categoryId) {
+        categoryRepository.deleteById(categoryId);
+        return "redirect:/admin/categories";
+    }
+
     @PostMapping("/admin/categories/{categoryId}")
     public String edit( @PathVariable Long categoryId, @RequestParam Long parentId,
                         @RequestParam String name) {
