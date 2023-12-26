@@ -46,11 +46,12 @@
 <body>
 <div th:include="admin-menu :: menu" ></div>
 
-<h2 th:if="${category.getId() != null}" style="margin-top: 13rem; margin-left: 5.2rem; margin-bottom: 1rem">Редагування категорії</h2>
-<h2 th:if="${category.getId() == null}" style="margin-top: 13rem; margin-left: 5.2rem; margin-bottom: 1rem">Додавання категорії</h2>
-<div th:if="${success}" class="alert alert-success mx-5" role="alert">
-    Category was successfully updated!
+<h2 th:if="${category.getId() != null}" style="margin-top: 2rem; margin-left: 5.2rem; margin-bottom: 1rem">Редагування категорії</h2>
+<h2 th:if="${category.getId() == null}" style="margin-top: 2rem; margin-left: 5.2rem; margin-bottom: 1rem">Додавання категорії</h2>
+<div th:if="${success}" class="alert alert-success" role="alert" style="margin-left: 5.2rem; margin-right: 5.2rem">
+    Категорія успішно збережена!
 </div>
+
 <form th:action="@{/admin/categories/{id}(id=${category.getId() != null ? category.getId(): -1 })}" method="post">
     <input type="hidden" id="parentId" name="parentId" th:value="${category.getParentCategory() != null? category.getParentCategory().getId() :'-1'}"/>
     <input type="hidden" id="id" th:value="${category.getId()}"/>
@@ -60,14 +61,13 @@
     <label for="name" class="form-label" style="font-weight: bold">Батьківська категорія</label>
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            <span id="parentCategoryName" th:text="${category.getParentCategory() != null? category.getParentCategory().getName(): 'Корневая категория'}"> </span>
+            <span id="parentCategoryName" th:text="${category.getParentCategory() != null? category.getParentCategory().getName(): 'Батьківська категорія'}"> </span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
             <li class="dropdown-item category-level-1">
                 <a  href="javascript://none"
-                   th:attr="onclick=|onSelect('-1', 'Корневая категория')|"
-                   style="color: black"
-                >Корневая категория</a>
+                   th:attr="onclick=|onSelect('-1', 'Батьківська категорія')|"
+                   style="color: black">Батьківська категорія</a>
             </li>
             <li th:each="category : ${categories}" class="dropdown-item"
                 th:style="'margin-left:' + ${category.getLevel() * 20} + 'px'"
@@ -75,9 +75,7 @@
                 <a th:text="${category.getName()}"
                    href="javascript://none"
                    th:attr="onclick=|onSelect('${category.getId()}', '${category.getName()}')|"
-
-                   style="color: black"
-                />
+                   style="color: black"/>
             </li>
 
         </ul>
@@ -96,14 +94,13 @@
                     <div class="modal-body" style="margin-top: 1.5rem">
                         Ви впевнені?
                     </div>
-                    <div class="d-flex justify-content-start modal-footer border-0" style="margin-top: 0.2rem">
-                        <button type="button" class="btn btn-outline-secondary btn-center" data-bs-dismiss="modal" style="margin-right: 2rem; width: 7rem">Ні</button>
+                    <div class="d-flex justify-content-center modal-footer border-0" style="margin-top: 0.2rem">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" style="margin-right: 2rem; width: 7rem">Ні</button>
                         <button type="button" class="btn btn-outline-dark" style="width: 7rem" onclick="deleteCategory()">Так</button>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 </form>

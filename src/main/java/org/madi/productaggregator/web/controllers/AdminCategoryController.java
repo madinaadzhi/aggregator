@@ -60,7 +60,6 @@ public class AdminCategoryController {
     @PostMapping("/admin/categories/{categoryId}")
     public String edit( @PathVariable Long categoryId, @RequestParam Long parentId,
                         @RequestParam String name) {
-
         if (parentId == -1) {
             parentId = null;
         }
@@ -75,7 +74,6 @@ public class AdminCategoryController {
         category.setParentId(parentId);
         category.setName(name);
         CategoryEntity saved = categoryRepository.save(category);
-
         return "redirect:/admin/categories/" + saved.getId() + "?success=true";
     }
 

@@ -45,13 +45,13 @@
 <body>
 <div th:include="admin-menu :: menu" ></div>
 
-<h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 1rem">Категорії</h2>
+<h2 style="margin-top: 2rem; margin-left: 5.2rem; margin-bottom: 1rem">Категорії</h2>
 
-<div th:if="${error}" class="alert alert-danger mx-5" role="alert">
-    Нельзя удалить категории, в которых есть продукты
+<div th:if="${error}" class="alert alert-danger" role="alert" style="margin-left: 5.2rem; margin-right: 5.2rem">
+    Видалити категорію неможливо. Категорія містить продукти.
 </div>
-<div class="d-flex justify-content-start" style="margin-left: 40px; margin-top: 2rem">
-    <button type="button" class="btn btn-outline-dark" style="width: 7rem" onclick="addCategory()">Додати</button>
+<div class="d-flex justify-content-start" style="margin-left: 5.2rem; margin-top: 2rem">
+    <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 1.2rem" onclick="addCategory()">Додати</button>
     <input class="ms-2 input" id="filter" onkeyup="filter()"/>
 </div>
 
