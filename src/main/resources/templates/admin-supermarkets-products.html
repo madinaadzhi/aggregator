@@ -5,10 +5,32 @@
     <title>Продукти з супермаркетів</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script>
+        function handler() {
+            let pageSize = document.getElementById('pageSize').value;
+            let activePage = document.getElementById('activePage').value;
+            let productNamePattern = document.getElementById('name').value;
+            let url = '/admin/products?pageSize=' + pageSize +
+                '&activePage=' + activePage + '&productName=' + productNamePattern;
+            window.open(url, "_self")
+        }
+    </script>
 </head>
 <body>
 <div th:include="admin-menu :: menu" ></div>
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Продукти з супермаркетів (<span th:text="${productCount}"></span>)</h2>
+<div class="input-group">
+    <input id="pageSize" th:value="${pageSize}" hidden="true" type="text" class="form-control">
+    <input id="activePage" th:value="${1}" hidden="true" type="text" class="form-control">
+    <input id="name" th:value="${productName}" type="text" class="form-control"
+           style="margin-left: 7rem; max-width: 350px; max-height: 40px; border-top-left-radius: 10px; border-bottom-left-radius: 10px">
+    <button onclick="handler()" class="btn btn-outline-dark" type="button"
+            style="border-top-right-radius: 10px; border-bottom-right-radius: 10px">
+        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+            <path d="M15.5001 13.9999H14.7101L14.4301 13.7299C15.6301 12.3299 16.2501 10.4199 15.9101 8.38989C15.4401 5.60989 13.1201 3.38989 10.3201 3.04989C6.09014 2.52989 2.53014 6.08989 3.05014 10.3199C3.39014 13.1199 5.61014 15.4399 8.39014 15.9099C10.4201 16.2499 12.3301 15.6299 13.7301 14.4299L14.0001 14.7099V15.4999L18.2501 19.7499C18.6601 20.1599 19.3301 20.1599 19.7401 19.7499C20.1501 19.3399 20.1501 18.6699 19.7401 18.2599L15.5001 13.9999ZM9.50014 13.9999C7.01014 13.9999 5.00014 11.9899 5.00014 9.49989C5.00014 7.00989 7.01014 4.99989 9.50014 4.99989C11.9901 4.99989 14.0001 7.00989 14.0001 9.49989C14.0001 11.9899 11.9901 13.9999 9.50014 13.9999Z" fill="currentColor"></path>
+        </svg>
+    </button>
+</div>
 <div style="margin-left: 4.5rem; margin-top: 2rem">
     <div class="form-check">
         <div class="container text-center">

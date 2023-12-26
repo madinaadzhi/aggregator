@@ -1,5 +1,6 @@
 package org.madi.productaggregator.web.controllers;
 
+import org.apache.commons.lang.StringUtils;
 import org.madi.productaggregator.web.dao.ProductRepository;
 import org.madi.productaggregator.web.entities.ProductEntity;
 import org.madi.productaggregator.web.util.PagingUtil;
@@ -28,8 +29,17 @@ public class AdminProductController {
             activePage = 1;
         }
         Pageable paging = PageRequest.of(activePage - 1, pageSize);
-        int productCount = productRepository.countByAggregatorProductEntityIdIsNull();
-        List<ProductEntity> products = productRepository.findProductEntitiesByAggregatorProductEntityIdIsNull(paging);
+        int productCount;
+        List<ProductEntity> products;
+
+        if (StringUtils.isNotBlank(productName)) {
+            String prodNameTemplate = '%' + productName + '%';
+            productCount = productRepository.countByAggregatorProductEntityIdIsNullAndNameLike(prodNameTemplate);
+            products = productRepository.findProductEntitiesByAggregatorProductEntityIdIsNullAndNameLike(prodNameTemplate, paging);
+        } else {
+            productCount = productRepository.countByAggregatorProductEntityIdIsNull();
+            products = productRepository.findProductEntitiesByAggregatorProductEntityIdIsNull(paging);
+        }
 
         model.addAttribute("productCount", productCount);
         model.addAttribute("productName", productName);

@@ -23,5 +23,7 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
 
     ProductEntity findProductEntityByMarketEntityIdAndExternalId(Long marketId, String externalId);
     List<ProductEntity> findProductEntitiesByAggregatorProductEntityIdIsNull(Pageable pageable);
+    List<ProductEntity> findProductEntitiesByAggregatorProductEntityIdIsNullAndNameLike(String productName, Pageable pageable);
     int countByAggregatorProductEntityIdIsNull();
+    int countByAggregatorProductEntityIdIsNullAndNameLike(String productName);
 }
