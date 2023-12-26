@@ -23,10 +23,7 @@
                     productIds.push(checkBox.getAttribute('data-product-id'));
                 }
             }
-            let url = '/admin/aggregation/link?';
-            for (const productId of productIds) {
-                url = url + 'productIds=' + productId + '&';
-            }
+            let url = '/admin/aggregation/link?productIds=' + productIds.join();
             window.open(url, "_self");
         }
     </script>
@@ -79,10 +76,8 @@
 
         </div>
     </div>
-    <a href="admin-add-products.html" target="_blank">
-    <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Додати</button></a>
-
-        <button type="button" class="btn btn-outline-dark" style="width: 7rem" onclick="link()">Звʼязати</button>
+    <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Додати</button>
+    <button type="button" class="btn btn-outline-dark" style="width: 7rem" onclick="link()">Звʼязати</button>
 </div>
 <nav>
     <ul class="pagination justify-content-center mt-3">
