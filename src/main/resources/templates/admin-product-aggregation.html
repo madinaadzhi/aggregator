@@ -137,21 +137,16 @@
             </ul>
         </div>
         <label class="form-label" style="font-weight: bold;">Картинка</label>
-        <div class="d-flex" style="margin-bottom: 2rem">
+        <div style="display: flex">
+        <div class="d-flex" style="margin-bottom: 2rem" th:each="product : ${products}">
             <div class="form-check">
                 <label>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" checked>
-                    <img src="https://content.silpo.ua/sku/ecommerce/0/480x480wwm/338_480x480wwm_5055bf84-f747-af75-2086-e54fdefeaebe.png"
+                    <input class="form-check-input" type="radio" name="imageUrl" th:value="${product.getImgUrl()}"/>
+                    <img th:src="${product.getImgUrl()}"
                          style="width: 150px; height: 150px">
                 </label>
             </div>
-            <div class="form-check">
-                <label>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault">
-                    <img src="https://content.fora.ua/sku/ecommerce/0/480x480fora/338_480x480fora_5055bf84-f747-af75-2086-e54fdefeaebe.png"
-                         style="width: 150px; height: 150px">
-                </label>
-            </div>
+        </div>
         </div>
     </div>
     <button type="submit" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Применить</button>
