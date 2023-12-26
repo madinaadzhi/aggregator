@@ -19,6 +19,9 @@ public class AggregatorProductEntity {
     private String name;
     @Column(name = "category_id", nullable = false)
     private Long categoryId;
+    @ManyToOne
+    @JoinColumn(name = "category_id", updatable = false, insertable = false)
+    private CategoryEntity category;
     @Column(name = "image_url", length = 1024)
     private String imageUrl;
     @OneToMany(mappedBy="aggregatorProductEntity", fetch = FetchType.EAGER)

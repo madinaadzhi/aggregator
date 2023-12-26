@@ -14,4 +14,5 @@ public interface AggregatorProductRepository extends PagingAndSortingRepository<
     List<AggregatorProductEntity> findAggregatorProductEntitiesByCategoryIdIn(List<Long> categoryIds, Pageable pageable);
     int countByCategoryIdIn(List<Long> categoryIds);
     int countByCategoryIdInAndNameLike(List<Long> categoryIds, String productName);
+    List<AggregatorProductEntity> findFirst10ByNameLike(String productNameTemplate);
 }
