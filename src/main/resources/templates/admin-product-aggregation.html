@@ -13,11 +13,13 @@
         }
 
         function displayLinkSection() {
-
+            document.getElementById('link-section').style.display = 'block';
+            document.getElementById('add-section').style.display = 'none';
         }
 
         function displayAddSection() {
-
+            document.getElementById('link-section').style.display = 'none';
+            document.getElementById('add-section').style.display = 'block';
         }
     </script>
 </head>
@@ -51,6 +53,8 @@
         <input  type="radio" id="add" name="mode" value="add" onclick="displayAddSection()"/>
     </div>
 
+    <div id="link-section">
+
     <div class="input-group">
         <input id="aggregatorProductName" th:value="${aggregatorProductName}" type="text" class="form-control"
                style="margin-left: 7rem; max-width: 350px; max-height: 40px; border-top-left-radius: 10px; border-bottom-left-radius: 10px">
@@ -71,7 +75,45 @@
             <span class="ms-5" th:text="${aggregatorProduct.getUnit()}"></span>
         </div>
     </div>
-
+    </div>
+    <div id="add-section" style="display: none">
+        <label for="name" class="form-label" style="font-weight: bold; margin-top: 1rem">Назва</label>
+        <input type="text" class="form-control" id="name" style="width: 20rem; margin-bottom: 2rem">
+        <label class="form-label" style="font-weight: bold">Категорія</label>
+        <select class="form-select" style="width: 15rem; margin-bottom: 2rem">
+            <option selected>Оберіть категорію</option>
+            <option value="">Фрукти, овочі, соління</option>
+            <option value="">Овочі</option>
+            <option value="">Баклажан</option>
+            <option value="">Гарбуз</option>
+            <option value="">Кабачок</option>
+            <option value="">Капуста</option>
+            <option value="">Коренеплоди</option>
+            <option value="">Кукурудза свіжа</option>
+            <option value="">Огірки</option>
+            <option value="">Перець</option>
+            <option value="">Помідори</option>
+            <option value="">Цибуля, часник</option>
+            <option value="">Овочеві набори</option>
+        </select>
+        <label class="form-label" style="font-weight: bold;">Картинка</label>
+        <div class="d-flex" style="margin-bottom: 2rem">
+            <div class="form-check">
+                <label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" checked>
+                    <img src="https://content.silpo.ua/sku/ecommerce/0/480x480wwm/338_480x480wwm_5055bf84-f747-af75-2086-e54fdefeaebe.png"
+                         style="width: 150px; height: 150px">
+                </label>
+            </div>
+            <div class="form-check">
+                <label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault">
+                    <img src="https://content.fora.ua/sku/ecommerce/0/480x480fora/338_480x480fora_5055bf84-f747-af75-2086-e54fdefeaebe.png"
+                         style="width: 150px; height: 150px">
+                </label>
+            </div>
+        </div>
+    </div>
     <button type="submit" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Применить</button>
 </div>
 </form>
