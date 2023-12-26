@@ -8,8 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import static org.madi.productaggregator.web.controllers.CategoryUtils.buildCategories;
 
 @Controller
 public class AdminCategoryController {
@@ -78,14 +79,5 @@ public class AdminCategoryController {
     }
 
 
-    private List<CategoryEntity> buildCategories(List<CategoryEntity> parentCategories) {
-        List<CategoryEntity> categories = new ArrayList<>();
-        for (CategoryEntity category : parentCategories) {
-            categories.add(category);
-            if (category.getChildCategories() != null) {
-                categories.addAll(buildCategories(category.getChildCategories()));
-            }
-        }
-        return categories;
-    }
+
 }

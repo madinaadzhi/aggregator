@@ -5,6 +5,32 @@
     <title>Агрегація продукту</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .category-level-1 {
+            margin-left: 0;
+            font-size: 18px;
+
+        }
+        .category-level-2 {
+            margin-left: 20px;
+            margin-right: -20px;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        .category-level-3 {
+            margin-left: 40px;
+            margin-right: -40px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        .category-level-4 {
+            margin-left: 60px;
+            margin-right: -60px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+    </style>
     <script>
         function handler() {
             let url = '/admin/aggregation/link?productIds=' + document.getElementById('productIds').value +
@@ -21,6 +47,11 @@
             document.getElementById('link-section').style.display = 'none';
             document.getElementById('add-section').style.display = 'block';
         }
+
+        function onSelect(id, name){
+            document.getElementById('parentId').value = id;
+            document.getElementById('parentCategoryName').innerText = name;
+        }
     </script>
 </head>
 <body>
@@ -28,7 +59,8 @@
 
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Агрегація продукту</h2>
 <form th:action="@{/admin/aggregation/link}" method="post">
-<div style="margin-left: 5.2rem">
+    <input type="hidden" id="parentId" name="parentId" value="-1"/>
+    <div style="margin-left: 5.2rem">
     <label class="form-label" style="font-weight: bold;">Продукти з супермаркетів</label>
     <input id="productIds" name="productIds" type="hidden" th:value="${productIds}"/>
     <div class="row mb-2" th:each="product : ${products}">
@@ -80,22 +112,30 @@
         <label for="name" class="form-label" style="font-weight: bold; margin-top: 1rem">Назва</label>
         <input type="text" class="form-control" id="name" style="width: 20rem; margin-bottom: 2rem">
         <label class="form-label" style="font-weight: bold">Категорія</label>
-        <select class="form-select" style="width: 15rem; margin-bottom: 2rem">
-            <option selected>Оберіть категорію</option>
-            <option value="">Фрукти, овочі, соління</option>
-            <option value="">Овочі</option>
-            <option value="">Баклажан</option>
-            <option value="">Гарбуз</option>
-            <option value="">Кабачок</option>
-            <option value="">Капуста</option>
-            <option value="">Коренеплоди</option>
-            <option value="">Кукурудза свіжа</option>
-            <option value="">Огірки</option>
-            <option value="">Перець</option>
-            <option value="">Помідори</option>
-            <option value="">Цибуля, часник</option>
-            <option value="">Овочеві набори</option>
-        </select>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="parentCategoryName">Корневая категория</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
+                <li class="dropdown-item category-level-1">
+                    <a  href="javascript://none"
+                        th:attr="onclick=|onSelect('-1', 'Корневая категория')|"
+                        style="color: black"
+                    >Корневая категория</a>
+                </li>
+                <li th:each="category : ${categories}" class="dropdown-item"
+                    th:style="'margin-left:' + ${category.getLevel() * 20} + 'px'"
+                    th:classappend="'category-level-' + ${category.getLevel() > 4? '4': category.getLevel()}">
+                    <a th:text="${category.getName()}"
+                       href="javascript://none"
+                       th:attr="onclick=|onSelect('${category.getId()}', '${category.getName()}')|"
+
+                       style="color: black"
+                    />
+                </li>
+
+            </ul>
+        </div>
         <label class="form-label" style="font-weight: bold;">Картинка</label>
         <div class="d-flex" style="margin-bottom: 2rem">
             <div class="form-check">
