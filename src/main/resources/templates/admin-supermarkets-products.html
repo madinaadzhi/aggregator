@@ -14,6 +14,21 @@
                 '&activePage=' + activePage + '&productName=' + productNamePattern;
             window.open(url, "_self")
         }
+
+        function link() {
+            let checkBoxes = document.getElementsByClassName('ch-marker');
+            let productIds = [];
+            for (const checkBox of checkBoxes) {
+                if (checkBox.checked) {
+                    productIds.push(checkBox.getAttribute('data-product-id'));
+                }
+            }
+            let url = '/admin/aggregation/link?';
+            for (const productId of productIds) {
+                url = url + 'productIds=' + productId + '&';
+            }
+            window.open(url, "_self");
+        }
     </script>
 </head>
 <body>
@@ -44,7 +59,7 @@
             </div>
         </div>
         <div class="container text-center" th:each="product : ${products}">
-            <input class="form-check-input me-1" type="checkbox" value="" >
+            <input class="form-check-input me-1 ch-marker" type="checkbox" th:attr="data-product-id=${product.getId()}" >
             <div class="row mb-2">
                 <div class="col text-start" th:text="${product.getName()}"/>
                 <div class="col" style="margin-top: -0.8rem">
@@ -66,8 +81,8 @@
     </div>
     <a href="admin-add-products.html" target="_blank">
     <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Додати</button></a>
-    <a href="admin-product-aggregation.html" target="_blank">
-        <button type="button" class="btn btn-outline-dark" style="width: 7rem">Звʼязати</button></a>
+
+        <button type="button" class="btn btn-outline-dark" style="width: 7rem" onclick="link()">Звʼязати</button>
 </div>
 <nav>
     <ul class="pagination justify-content-center mt-3">
