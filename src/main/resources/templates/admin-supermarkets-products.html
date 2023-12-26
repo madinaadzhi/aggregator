@@ -7,6 +7,7 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+<div th:include="admin-menu :: menu" ></div>
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Продукти з супермаркетів (<span th:text="${productCount}"></span>)</h2>
 <div style="margin-left: 4.5rem; margin-top: 2rem">
     <div class="form-check">
@@ -26,7 +27,7 @@
                 <div class="col text-start" th:text="${product.getName()}"/>
                 <div class="col" style="margin-top: -0.8rem">
                     <img th:src="${product.getImgUrl()}"
-                         style="width: 50px; height: 50px">
+                         style=" height: 50px">
                 </div>
                 <div class="col">
                     <span th:text="${product.price}"/>
@@ -35,7 +36,7 @@
                 <div class="col" th:text="${product.getCategory().getName()}"></div>
                 <div class="col" style="margin-top: -1rem">
                     <img th:src="${product.getMarketEntity().getLogoUrl()}"
-                         style="width: 60px; height: 60px">
+                         style=" height: 30px">
                 </div>
             </div>
 
@@ -48,18 +49,17 @@
 </div>
 <nav>
     <ul class="pagination justify-content-center mt-3">
-        <li class="page-item disabled">
-            <a class="page-link">Попередня</a>
+        <li class="page-item" th:classappend="${activePage == 1 ? 'disabled' : ''}">
+            <a class="page-link"
+               th:href="@{/admin/products( pageSize=${pageSize}, activePage=${activePage - 1}, productName=${productName})}">Previous</a>
         </li>
-        <li class="page-item active">
-            <a class="page-link" href="#">1</a></li>
-        <li class="page-item" aria-current="page">
-            <a class="page-link" href="#">2</a>
+        <li th:each="page : ${pages}" class="page-item" th:classappend="${page.isActive ? 'active' : ''}">
+            <a th:text="${page.pageNumber}" class="page-link"
+               th:href="@{/admin/products(pageSize=${pageSize}, activePage=${page.pageNumber}, productName=${productName})}"></a>
         </li>
-        <li class="page-item">
-            <a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-            <a class="page-link" href="#">Наступна</a>
+        <li class="page-item" th:classappend="${activePage == pages.size() ? 'disabled' : ''}">
+            <a class="page-link"
+               th:href="@{/admin/products( pageSize=${pageSize}, activePage=${activePage + 1}, productName=${productName})}">Next</a>
         </li>
     </ul>
 </nav>

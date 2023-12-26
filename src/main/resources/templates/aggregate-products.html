@@ -105,7 +105,6 @@
             <a th:text="${page.pageNumber}" class="page-link"
                th:href="@{/products(categoryId=${category.id}, pageSize=${pageSize}, activePage=${page.pageNumber}, productName=${productName})}"></a>
         </li>
-        </li>
         <li class="page-item" th:classappend="${activePage == pages.size() ? 'disabled' : ''}">
             <a class="page-link"
                th:href="@{/products(categoryId=${category.id}, pageSize=${pageSize}, activePage=${activePage + 1}, productName=${productName})}">Next</a>
