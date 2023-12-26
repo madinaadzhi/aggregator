@@ -21,7 +21,9 @@ public class AdminProductController {
     private ProductRepository productRepository;
     @GetMapping("admin/products")
     public String list( @RequestParam(required = false) Integer pageSize, @RequestParam(required = false) Integer activePage,
-                       @RequestParam(required = false) String productName, Model model) {
+                       @RequestParam(required = false) String productName,
+                        @RequestParam(required = false) Boolean success,
+                        Model model) {
         if (pageSize == null ) {
             pageSize = 25;
         }
@@ -41,6 +43,9 @@ public class AdminProductController {
             products = productRepository.findProductEntitiesByAggregatorProductEntityIdIsNull(paging);
         }
 
+        if (success != null && success) {
+            model.addAttribute("success", success);
+        }
         model.addAttribute("productCount", productCount);
         model.addAttribute("productName", productName);
         model.addAttribute("products", products);

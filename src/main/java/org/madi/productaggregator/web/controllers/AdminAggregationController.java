@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Arrays;
@@ -39,5 +40,19 @@ public class AdminAggregationController {
             model.addAttribute("aggregatorProductEntities", aggregatorProductEntities);
         }
         return "admin-product-aggregation";
+    }
+
+    @PostMapping("admin/aggregation/link")
+    public String link(@RequestParam("productIds") String productIdsString,
+                       @RequestParam Long aggProdId) {
+        List<Long> productIds = Arrays.stream(productIdsString.split(",")).map(Long::parseLong).toList();
+        List<ProductEntity> products = productRepository.findProductEntitiesByIdIn(productIds);
+
+        AggregatorProductEntity aggregatorProductEntity = aggregatorProductRepository.findById(aggProdId).get();
+        for (ProductEntity product : products) {
+            product.setAggregatorProductEntity(aggregatorProductEntity);
+            productRepository.save(product);
+        }
+        return "redirect:/admin/products?success=true";
     }
 }

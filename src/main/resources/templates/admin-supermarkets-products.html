@@ -31,6 +31,9 @@
 <body>
 <div th:include="admin-menu :: menu" ></div>
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Продукти з супермаркетів (<span th:text="${productCount}"></span>)</h2>
+<div th:if="${success}" class="alert alert-success mx-5" role="alert">
+    Product(s) were successfully linked with aggregated product!
+</div>
 <div class="input-group">
     <input id="pageSize" th:value="${pageSize}" hidden="true" type="text" class="form-control">
     <input id="activePage" th:value="${1}" hidden="true" type="text" class="form-control">
