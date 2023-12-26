@@ -20,6 +20,9 @@ public class ProductEntity {
     private String name;
     @Column(name = "category_id", nullable = false)
     private Long categoryId;
+    @ManyToOne
+    @JoinColumn(name = "category_id", updatable = false, insertable = false)
+    private CategoryEntity category;
     @Column(name = "price", nullable = false)
     private Double price;
     @Column(name = "is_available", nullable = false)
