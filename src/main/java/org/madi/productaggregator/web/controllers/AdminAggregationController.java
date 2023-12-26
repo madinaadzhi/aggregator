@@ -69,9 +69,22 @@ public class AdminAggregationController {
     @PostMapping("admin/aggregation/add")
     public String add(@RequestParam("productIds") String productIdsString,
             @RequestParam Long categoryId, @RequestParam String name, @RequestParam String imageUrl) {
+        List<Long> productIds = Arrays.stream(productIdsString.split(",")).map(Long::parseLong).toList();
+        List<ProductEntity> products = productRepository.findProductEntitiesByIdIn(productIds);
+        if (categoryId == -1) {
+            categoryId = null;
+        }
+        AggregatorProductEntity aggregatorProductEntity = new AggregatorProductEntity();
+        aggregatorProductEntity.setCategoryId(categoryId);
+        aggregatorProductEntity.setName(name);
+        aggregatorProductEntity.setUnit(products.get(0).getUnit());
+        aggregatorProductEntity.setImageUrl(imageUrl);
+        AggregatorProductEntity saved = aggregatorProductRepository.save(aggregatorProductEntity);
 
-        System.out.println("");
-
+        for (ProductEntity product : products) {
+            product.setAggregatorProductEntity(saved);
+            productRepository.save(product);
+        }
         return "redirect:/admin/products?success=true";
     }
 }
