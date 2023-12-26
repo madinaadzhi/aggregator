@@ -26,4 +26,5 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
     List<ProductEntity> findProductEntitiesByAggregatorProductEntityIdIsNullAndNameLike(String productName, Pageable pageable);
     int countByAggregatorProductEntityIdIsNull();
     int countByAggregatorProductEntityIdIsNullAndNameLike(String productName);
+    List<ProductEntity> findProductEntitiesByIdIn(List<Long> ids);
 }
