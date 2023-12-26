@@ -31,7 +31,7 @@ public class AdminAggregationController {
     private CategoryRepository categoryRepository;
     @Value("${aggregator.market.id}")
     private Long aggrMarketId;
-    @GetMapping("admin/aggregation/link")
+    @GetMapping("admin/aggregation")
     public String list(@RequestParam("productIds") String productIdsString,
                        @RequestParam(required = false) String aggregatorProductName,
                        Model model) {
@@ -63,6 +63,15 @@ public class AdminAggregationController {
             product.setAggregatorProductEntity(aggregatorProductEntity);
             productRepository.save(product);
         }
+        return "redirect:/admin/products?success=true";
+    }
+
+    @PostMapping("admin/aggregation/add")
+    public String add(@RequestParam("productIds") String productIdsString,
+            @RequestParam Long categoryId, @RequestParam String name, @RequestParam String imageUrl) {
+
+        System.out.println("");
+
         return "redirect:/admin/products?success=true";
     }
 }

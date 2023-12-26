@@ -33,7 +33,7 @@
     </style>
     <script>
         function handler() {
-            let url = '/admin/aggregation/link?productIds=' + document.getElementById('productIds').value +
+            let url = '/admin/aggregation?productIds=' + document.getElementById('productIds').value +
                 '&aggregatorProductName=' + document.getElementById('aggregatorProductName').value;
             window.open(url, "_self")
         }
@@ -41,16 +41,18 @@
         function displayLinkSection() {
             document.getElementById('link-section').style.display = 'block';
             document.getElementById('add-section').style.display = 'none';
+            document.aggregateForm.action = '/admin/aggregation/link';
         }
 
         function displayAddSection() {
             document.getElementById('link-section').style.display = 'none';
             document.getElementById('add-section').style.display = 'block';
+            document.aggregateForm.action = '/admin/aggregation/add';
         }
 
         function onSelect(id, name){
-            document.getElementById('parentId').value = id;
-            document.getElementById('parentCategoryName').innerText = name;
+            document.getElementById('categoryId').value = id;
+            document.getElementById('categoryName').innerText = name;
         }
     </script>
 </head>
@@ -58,8 +60,8 @@
 <div th:include="admin-menu :: menu" ></div>
 
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Агрегація продукту</h2>
-<form th:action="@{/admin/aggregation/link}" method="post">
-    <input type="hidden" id="parentId" name="parentId" value="-1"/>
+<form  method="post" name="aggregateForm">
+    <input type="hidden" id="categoryId" name="categoryId" value="-1"/>
     <div style="margin-left: 5.2rem">
     <label class="form-label" style="font-weight: bold;">Продукти з супермаркетів</label>
     <input id="productIds" name="productIds" type="hidden" th:value="${productIds}"/>
@@ -110,11 +112,11 @@
     </div>
     <div id="add-section" style="display: none">
         <label for="name" class="form-label" style="font-weight: bold; margin-top: 1rem">Назва</label>
-        <input type="text" class="form-control" id="name" style="width: 20rem; margin-bottom: 2rem">
+        <input type="text" class="form-control" id="name" name="name" style="width: 20rem; margin-bottom: 2rem">
         <label class="form-label" style="font-weight: bold">Категорія</label>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <span id="parentCategoryName">Корневая категория</span>
+                <span id="categoryName">Корневая категория</span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
                 <li class="dropdown-item category-level-1">

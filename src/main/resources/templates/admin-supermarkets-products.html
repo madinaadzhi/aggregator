@@ -23,7 +23,7 @@
                     productIds.push(checkBox.getAttribute('data-product-id'));
                 }
             }
-            let url = '/admin/aggregation/link?productIds=' + productIds.join();
+            let url = '/admin/aggregation?productIds=' + productIds.join();
             window.open(url, "_self");
         }
     </script>
