@@ -26,7 +26,8 @@ public class AggregatorProductEntity {
     private String imageUrl;
     @OneToMany(mappedBy="aggregatorProductEntity", fetch = FetchType.EAGER)
     private List<ProductEntity> productEntities;
-
+    @Column
+    private String unit;
     public AggregatorProductEntity(Long id, String name, Long categoryID, String imageUrl) {
         this.id = id;
         this.name = name;

@@ -25,7 +25,7 @@ public class AdminProductController {
                         @RequestParam(required = false) Boolean success,
                         Model model) {
         if (pageSize == null ) {
-            pageSize = 25;
+            pageSize = 10;
         }
         if (activePage == null) {
             activePage = 1;
