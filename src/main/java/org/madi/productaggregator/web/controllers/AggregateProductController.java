@@ -28,6 +28,14 @@ public class AggregateProductController {
         List<Long> childCategoryIds = getChildCategoryIds(category.get());
         List<CategoryEntity> parentCategories = getParentCategories(category.get());
         parentCategories.add(category.get());
+        model.addAttribute("parentCategories", parentCategories);
+        model.addAttribute("category", category.get());
+
+        putAggregatorProductInfoToModel(pageSize, activePage, productName, model, childCategoryIds);
+        return "aggregate-products";
+    }
+
+    private void putAggregatorProductInfoToModel(int pageSize, int activePage, String productName, Model model, List<Long> childCategoryIds) {
         Pageable paging = PageRequest.of(activePage - 1, pageSize);
         List<AggregatorProductEntity> aggregatorProductEntities;
         int aggProdCount;
@@ -42,13 +50,10 @@ public class AggregateProductController {
 
         model.addAttribute("aggProdCount", aggProdCount);
         model.addAttribute("productName", productName);
-        model.addAttribute("category", category.get());
         model.addAttribute("prods", aggregatorProductEntities);
         model.addAttribute("pageSize", pageSize);
         model.addAttribute("activePage", activePage);
-        model.addAttribute("parentCategories", parentCategories);
         model.addAttribute("pages", PagingUtil.buildPageNavItem(pageSize, aggProdCount, activePage));
-        return "aggregate-products";
     }
 
     private List<CategoryEntity> getParentCategories(CategoryEntity category) {
