@@ -72,7 +72,8 @@ public class AdminAggregationController {
         List<Long> productIds = Arrays.stream(productIdsString.split(",")).map(Long::parseLong).toList();
         List<ProductEntity> products = productRepository.findProductEntitiesByIdIn(productIds);
         if (categoryId == -1) {
-            categoryId = null;
+            // todo - add validation
+            throw new RuntimeException("validation needs to be implemented");
         }
         AggregatorProductEntity aggregatorProductEntity = new AggregatorProductEntity();
         aggregatorProductEntity.setCategoryId(categoryId);
