@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редагування продукту</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Редагування продукту</h2>
+<div style="margin-left: 5.2rem">
+    <label class="form-label" style="font-weight: bold;">Продукти</label>
+    <div class="row mb-2">
+        <div class="col" style="margin-top: -1rem">
+            <img src="https://silpo.ua/pcs/logo.svg?id=Wed%20Nov%2001%202023%2014:47:48%20GMT+0200%20(%D0%B7%D0%B0%20%D1%81%D1%85%D1%96%D0%B4%D0%BD%D0%BE%D1%94%D0%B2%D1%80%D0%BE%D0%BF%D0%B5%D0%B9%D1%81%D1%8C%D0%BA%D0%B8%D0%BC%20%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D0%B8%D0%BC%20%D1%87%D0%B0%D1%81%D0%BE%D0%BC)"
+                 style="width: 60px; height: 60px">
+        </div>
+        <div class="col">Томат черрі, кошик</div>
+        <div class="col text-center">Помідори</div>
+        <div class="col text-center">88.99 ₴</div>
+        <div class="col text-center">шт</div>
+        <div class="col text-center" style="margin-top: -0.8rem">
+            <img src="https://content.silpo.ua/sku/ecommerce/0/480x480wwm/338_480x480wwm_5055bf84-f747-af75-2086-e54fdefeaebe.png"
+                 style="width: 50px; height: 50px">
+        </div>
+        <div class="col text-center">
+            <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Відвʼязати</button>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col" style="margin-top: -0.1rem">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6%D1%96_%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D1%96%D0%B2_%D0%A4%D0%BE%D1%80%D0%B0.svg/1200px-%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6%D1%96_%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D1%96%D0%B2_%D0%A4%D0%BE%D1%80%D0%B0.svg.png"
+                 style="width: 75px; height: 22px">
+        </div>
+        <div class="col">Томат черрі, кошик</div>
+        <div class="col text-center">Помідори</div>
+        <div class="col text-center">62.90 ₴</div>
+        <div class="col text-center">шт</div>
+        <div class="col text-center" style="margin-top: -0.8rem">
+            <img src="https://content.fora.ua/sku/ecommerce/0/480x480fora/338_480x480fora_5055bf84-f747-af75-2086-e54fdefeaebe.png"
+                 style="width: 50px; height: 50px">
+        </div>
+        <div class="col text-center">
+            <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Відвʼязати</button>
+        </div>
+    </div>
+    <label for="name" class="form-label" style="font-weight: bold; margin-top: 1rem">Назва</label>
+    <input type="text" class="form-control" id="name" placeholder="Томат черрі, кошик" style="width: 20rem; margin-bottom: 2rem">
+    <label class="form-label" style="font-weight: bold">Категорія</label>
+    <select class="form-select" style="width: 15rem; margin-bottom: 2rem">
+        <option selected>Помідори</option>
+        <option value="">Фрукти, овочі, соління</option>
+        <option value="">Овочі</option>
+        <option value="">Баклажан</option>
+        <option value="">Гарбуз</option>
+        <option value="">Кабачок</option>
+        <option value="">Капуста</option>
+        <option value="">Коренеплоди</option>
+        <option value="">Кукурудза свіжа</option>
+        <option value="">Огірки</option>
+        <option value="">Перець</option>
+        <option value="">Помідори</option>
+        <option value="">Цибуля, часник</option>
+        <option value="">Овочеві набори</option>
+    </select>
+    <label class="form-label" style="font-weight: bold;">Картинка</label>
+    <div class="d-flex" style="margin-bottom: 2rem">
+        <div class="form-check">
+            <label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" checked>
+                <img src="https://content.silpo.ua/sku/ecommerce/0/480x480wwm/338_480x480wwm_5055bf84-f747-af75-2086-e54fdefeaebe.png"
+                     style="width: 150px; height: 150px">
+            </label>
+        </div>
+        <div class="form-check">
+            <label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault">
+                <img src="https://content.fora.ua/sku/ecommerce/0/480x480fora/338_480x480fora_5055bf84-f747-af75-2086-e54fdefeaebe.png"
+                     style="width: 150px; height: 150px">
+            </label>
+        </div>
+    </div>
+    <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Зберегти</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
