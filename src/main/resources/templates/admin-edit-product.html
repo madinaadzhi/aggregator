@@ -37,9 +37,11 @@
             <img th:src="${product.getImgUrl()}"
                  style="width: 50px; height: 50px">
         </div>
-<!--        <div class="col text-center">-->
-<!--            <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Відвʼязати</button>-->
-<!--        </div>-->
+        <div class="col text-center">
+            <a th:href="${'/admin/aggregate-products/' + aggregateProduct.id + '/unlink/' + product.id}">
+                <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Відвʼязати</button>
+            </a>
+        </div>
     </div>
     <label for="name" class="form-label" style="font-weight: bold; margin-top: 1rem">Назва</label>
     <input th:value="${aggregateProduct.name}" type="text" class="form-control" id="name" name="name"  style="width: 40rem; margin-bottom: 2rem">

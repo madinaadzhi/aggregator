@@ -28,6 +28,8 @@ public class AdminAggregateProductController {
     private AggregatorProductRepository aggregatorProductRepository;
     @Autowired
     private CategoryRepository categoryRepository;
+    @Autowired
+    private ProductRepository productRepository;
     @Value("${aggregator.market.id}")
     private Long aggrMarketId;
     @GetMapping("/admin/aggregate-products")
@@ -63,5 +65,13 @@ public class AdminAggregateProductController {
         aggregatorProductRepository.save(aggregatorProductEntity);
         return "redirect:/admin/aggregate-products/" + aggregatorProductEntity.getId() + "?success=true";
 
+    }
+
+    @GetMapping("/admin/aggregate-products/{id}/unlink/{productId}")
+    public String unlink(@PathVariable Long id, @PathVariable Long productId) {
+        ProductEntity product = productRepository.findById(productId).get();
+        product.setAggregatorProductEntity(null);
+        productRepository.save(product);
+        return "redirect:/admin/aggregate-products/" + id + "?success=true";
     }
 }
