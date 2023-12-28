@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
+
 <div th:fragment="menu">
-    <div style="margin-top: 3rem; margin-left: 5.2rem">
+    <div  style="margin-top: 3rem; margin-left: 5.2rem;display: flex">
         <a href="/admin/categories" style="margin-right: 30px; color: black">Категорії</a>
         <a href="/admin/products" style="margin-right: 30px; color: black">Продукти</a>
         <a href="/admin/aggregate-products" style="margin-right: 30px; color: black">Агреговані продукти</a>
+        <div style="margin-right: 30px">
+            <form name="logoutForm" th:action="@{/logout}" method="post">
+                <a href="javascript://none" onclick="logout()"> Logout </a>
+            </form>
+        </div>
     </div>
+    <script>
+        function logout() {
+            document.logoutForm.submit();
+        }
+    </script>
 </div>
 </body>
 </html>

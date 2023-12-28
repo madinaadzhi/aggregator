@@ -11,14 +11,20 @@
 <div class="card" style="position: absolute; top: 50%; left: 50%; margin: -10rem 0 0 -10rem; width: 20rem; height: 20rem">
     <div class="card-body">
         <h3 class="card-title text-center mt-3 mb-4">Login</h3>
-        <form>
+        <div th:if="${param.error}" class="alert alert-danger" role="alert">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}" class="alert alert-danger" role="alert">
+            You have been logged out.
+        </div>
+        <form th:action="@{/login}" method="post">
             <div class="mb-1">
                 <label for="exampleInputUsername1" class="form-label">Username</label>
-                <input type="text" class="form-control" id="exampleInputUsername1" required>
+                <input name="username" type="text" class="form-control" id="exampleInputUsername1" required>
             </div>
             <div class="mb-1">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" required>
+                <input name="password" type="password" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="row justify-content-center">
                 <button type="submit" class="btn btn-primary mt-3" style="width: 91%">Log in</button>
