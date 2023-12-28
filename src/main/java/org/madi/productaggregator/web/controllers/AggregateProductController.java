@@ -41,11 +41,21 @@ public class AggregateProductController {
         int aggProdCount;
         if (productName != null) {
             String productNameTempl = "%" + productName + "%";
-            aggregatorProductEntities = aggregatorProductRepository.findAggregatorProductEntitiesByCategoryIdInAndNameLike(childCategoryIds, productNameTempl, paging);
-            aggProdCount = aggregatorProductRepository.countByCategoryIdInAndNameLike(childCategoryIds, productNameTempl);
+            if (childCategoryIds != null ) {
+                aggregatorProductEntities = aggregatorProductRepository.findAggregatorProductEntitiesByCategoryIdInAndNameLike(childCategoryIds, productNameTempl, paging);
+                aggProdCount = aggregatorProductRepository.countByCategoryIdInAndNameLike(childCategoryIds, productNameTempl);
+            } else {
+                aggregatorProductEntities = aggregatorProductRepository.findAggregatorProductEntitiesByNameLike(productNameTempl, paging);
+                aggProdCount = aggregatorProductRepository.countByNameLike(productNameTempl);
+            }
         } else {
-            aggregatorProductEntities = aggregatorProductRepository.findAggregatorProductEntitiesByCategoryIdIn(childCategoryIds, paging);
-            aggProdCount = aggregatorProductRepository.countByCategoryIdIn(childCategoryIds);
+            if (childCategoryIds != null) {
+                aggregatorProductEntities = aggregatorProductRepository.findAggregatorProductEntitiesByCategoryIdIn(childCategoryIds, paging);
+                aggProdCount = aggregatorProductRepository.countByCategoryIdIn(childCategoryIds);
+            } else {
+                aggregatorProductEntities = aggregatorProductRepository.findAllBy(paging);
+                aggProdCount = aggregatorProductRepository.countBy();
+            }
         }
 
         model.addAttribute("aggProdCount", aggProdCount);
