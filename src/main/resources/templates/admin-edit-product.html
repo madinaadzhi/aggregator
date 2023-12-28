@@ -14,9 +14,11 @@
 </head>
 <body>
 <div th:include="admin-menu :: menu" ></div>
-
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Редагування продукту</h2>
-<form th:action="${'/admin/products/' + aggregateProduct.id}" method="post">
+<div th:if="${success}" class="alert alert-success mx-5" role="alert">
+    Aggregated product was successfully updated
+</div>
+<form th:action="${'/admin/aggregate-products/' + aggregateProduct.id}" method="post">
     <input type="hidden" id="categoryId" name="categoryId" th:value="${aggregateProduct.categoryId}"/>
     
 <div style="margin-left: 5.2rem">
@@ -64,6 +66,7 @@
         <div class="form-check" th:each="product : ${aggregateProduct.productEntities}">
             <label>
                 <input class="form-check-input" type="radio" name="imageUrl"
+                       th:value="${product.imgUrl}"
                        th:checked="${aggregateProduct.imageUrl == product.imgUrl} ? 'checked'">
                 <img th:src="${product.imgUrl}"
                      style="height: 150px">
@@ -71,7 +74,7 @@
         </div>
 
     </div>
-    <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Зберегти</button>
+    <button type="submit" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Зберегти</button>
 </div>
 </form>
 

@@ -39,12 +39,29 @@ public class AdminAggregateProductController {
     }
 
     @GetMapping("/admin/aggregate-products/{id}")
-    public String editView(@PathVariable Long id, Model model) {
+    public String editView(@PathVariable Long id, Model model,
+                           @RequestParam(required = false) Boolean success) {
         AggregatorProductEntity aggregatorProduct = aggregatorProductRepository.findById(id).get();
         List<CategoryEntity> parentCategories = categoryRepository.getCategoryEntitiesByMarketIdAndParentIdIsNull(aggrMarketId);
         List<CategoryEntity> categories = buildCategories(parentCategories);
+        if (success != null && success) {
+            model.addAttribute("success", success);
+        }
         model.addAttribute("categories", categories);
         model.addAttribute("aggregateProduct", aggregatorProduct);
         return "admin-edit-product";
+    }
+
+    @PostMapping("/admin/aggregate-products/{id}")
+    public String edit(@PathVariable Long id, @RequestParam Long categoryId,
+                       @RequestParam String name,
+                       @RequestParam String imageUrl) {
+        AggregatorProductEntity aggregatorProductEntity = aggregatorProductRepository.findById(id).get();
+        aggregatorProductEntity.setName(name);
+        aggregatorProductEntity.setImageUrl(imageUrl);
+        aggregatorProductEntity.setCategoryId(categoryId);
+        aggregatorProductRepository.save(aggregatorProductEntity);
+        return "redirect:/admin/aggregate-products/" + aggregatorProductEntity.getId() + "?success=true";
+
     }
 }
