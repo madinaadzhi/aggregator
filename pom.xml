@@ -15,7 +15,7 @@
     <description>productAggregator</description>
     <properties>
         <java.version>17</java.version>
-
+        <start-class>org.madi.productaggregator.ProductAggregatorApplication</start-class>
     </properties>
     <dependencies>
         <dependency>
