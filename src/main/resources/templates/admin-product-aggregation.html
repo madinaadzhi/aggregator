@@ -120,13 +120,13 @@
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                    <span id="categoryName">Please select category</span>
+                    <span id="categoryName">Оберіть категорію</span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
                     style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
                     <li class="dropdown-item category-level-1">
                         <a href="javascript://none"
-                           th:attr="onclick=|onSelect('-1', 'Корневая категория')|"
+                           th:attr="onclick=|onSelect('-1', 'Батьківська категорія')|"
                            style="color: black">Батьківська категорія</a>
                     </li>
                     <li th:each="category : ${categories}" class="dropdown-item"
@@ -135,7 +135,6 @@
                         <a th:text="${category.getName()}"
                            href="javascript://none"
                            th:attr="onclick=|onSelect('${category.getId()}', '${category.getName()}')|"
-
                            style="color: black"
                         />
                     </li>

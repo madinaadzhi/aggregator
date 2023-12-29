@@ -10,14 +10,17 @@
             font-size: 18px;
 
         }
+
         .category-level-2 {
             font-size: 16px;
             opacity: 0.8;
         }
+
         .category-level-3 {
             font-size: 14px;
             opacity: 0.6;
         }
+
         .category-level-4 {
             font-size: 14px;
             opacity: 0.6;
@@ -43,7 +46,7 @@
     </script>
 </head>
 <body>
-<div th:include="admin-menu :: menu" ></div>
+<div th:include="admin-menu :: menu"></div>
 
 <h2 style="margin-top: 2rem; margin-left: 5.2rem; margin-bottom: 1rem">Категорії</h2>
 
@@ -51,7 +54,9 @@
     Видалити категорію неможливо. Категорія містить продукти.
 </div>
 <div class="d-flex justify-content-start" style="margin-left: 5.2rem; margin-top: 2rem">
-    <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 1.2rem" onclick="addCategory()">Додати</button>
+    <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 1.2rem"
+            onclick="addCategory()">Додати
+    </button>
     <input class="ms-2 input" id="filter" onkeyup="filter()"/>
 </div>
 

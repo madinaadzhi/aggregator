@@ -19,7 +19,7 @@
     </script>
 </head>
 <body>
-<div th:include="admin-menu :: menu" ></div>
+<div th:include="admin-menu :: menu"></div>
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Продукти агрегатору</h2>
 <div style="margin-bottom: 3rem">
     <div style="margin-left: 5.2rem; margin-bottom: 3rem">
@@ -29,11 +29,14 @@
                     <input id="pageSize" th:value="${pageSize}" hidden="true" type="text" class="form-control">
                     <input id="activePage" th:value="${1}" hidden="true" type="text" class="form-control">
                     <input id="name" th:value="${productName}" type="text" class="form-control"
-                           style="margin-left: 7rem; max-width: 350px; max-height: 40px; border-top-left-radius: 10px; border-bottom-left-radius: 10px">
+                           style="max-width: 350px; max-height: 40px; border-top-left-radius: 10px; border-bottom-left-radius: 10px">
                     <button onclick="handler()" class="btn btn-outline-dark" type="button"
                             style="border-top-right-radius: 10px; border-bottom-right-radius: 10px">
-                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
-                            <path d="M15.5001 13.9999H14.7101L14.4301 13.7299C15.6301 12.3299 16.2501 10.4199 15.9101 8.38989C15.4401 5.60989 13.1201 3.38989 10.3201 3.04989C6.09014 2.52989 2.53014 6.08989 3.05014 10.3199C3.39014 13.1199 5.61014 15.4399 8.39014 15.9099C10.4201 16.2499 12.3301 15.6299 13.7301 14.4299L14.0001 14.7099V15.4999L18.2501 19.7499C18.6601 20.1599 19.3301 20.1599 19.7401 19.7499C20.1501 19.3399 20.1501 18.6699 19.7401 18.2599L15.5001 13.9999ZM9.50014 13.9999C7.01014 13.9999 5.00014 11.9899 5.00014 9.49989C5.00014 7.00989 7.01014 4.99989 9.50014 4.99989C11.9901 4.99989 14.0001 7.00989 14.0001 9.49989C14.0001 11.9899 11.9901 13.9999 9.50014 13.9999Z" fill="currentColor"></path>
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet"
+                             focusable="false">
+                            <path d="M15.5001 13.9999H14.7101L14.4301 13.7299C15.6301 12.3299 16.2501 10.4199 15.9101 8.38989C15.4401 5.60989 13.1201 3.38989 10.3201 3.04989C6.09014 2.52989 2.53014 6.08989 3.05014 10.3199C3.39014 13.1199 5.61014 15.4399 8.39014 15.9099C10.4201 16.2499 12.3301 15.6299 13.7301 14.4299L14.0001 14.7099V15.4999L18.2501 19.7499C18.6601 20.1599 19.3301 20.1599 19.7401 19.7499C20.1501 19.3399 20.1501 18.6699 19.7401 18.2599L15.5001 13.9999ZM9.50014 13.9999C7.01014 13.9999 5.00014 11.9899 5.00014 9.49989C5.00014 7.00989 7.01014 4.99989 9.50014 4.99989C11.9901 4.99989 14.0001 7.00989 14.0001 9.49989C14.0001 11.9899 11.9901 13.9999 9.50014 13.9999Z"
+                                  fill="currentColor"></path>
                         </svg>
                     </button>
                 </div>
@@ -47,16 +50,16 @@
             <div class="col">Категорія</div>
             <div class="col">Супермаркети</div>
         </div>
-        <div class="row mb-2"  th:each="prod : ${prods}">
+        <div class="row mb-2" th:each="prod : ${prods}">
             <div class="col">
-                <a th:href="${'/admin/aggregate-products/' + prod.id}"  style="color: black" th:text="${prod.name}"></a>
+                <a th:href="${'/admin/aggregate-products/' + prod.id}" style="color: black" th:text="${prod.name}"></a>
             </div>
             <div class="col text-center" style="margin-top: -0.8rem">
                 <img th:src="${prod.imageUrl}"
                      style="width: 50px; height: 50px">
             </div>
             <div class="col text-center" th:text="${prod.category.name}"></div>
-            <div class="col text-center"  >
+            <div class="col text-center">
                 <img th:each="marketProduct : ${prod.productEntities}" th:src="${marketProduct.marketEntity.logoUrl}"
                      style="height: 20px; margin-right: 20px">
             </div>

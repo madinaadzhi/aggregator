@@ -6,78 +6,78 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script>
-        function onSelect(id, name){
+        function onSelect(id, name) {
             document.getElementById('categoryId').value = id;
             document.getElementById('categoryName').innerText = name;
         }
     </script>
 </head>
 <body>
-<div th:include="admin-menu :: menu" ></div>
+<div th:include="admin-menu :: menu"></div>
 <h2 style="margin-top: 4rem; margin-left: 5.2rem; margin-bottom: 3rem">Редагування продукту</h2>
 <div th:if="${success}" class="alert alert-success mx-5" role="alert">
-    Aggregated product was successfully updated
+    Агрегований продукт успішно оновлено!
 </div>
 <form th:action="${'/admin/aggregate-products/' + aggregateProduct.id}" method="post">
     <input type="hidden" id="categoryId" name="categoryId" th:value="${aggregateProduct.categoryId}"/>
-    
-<div style="margin-left: 5.2rem">
-    <label class="form-label" style="font-weight: bold;">Продукти</label>
-
-    <div class="row mb-2" th:each="product : ${aggregateProduct.getProductEntities()}">
-        <div class="col" >
-            <img th:src="${product.marketEntity.logoUrl}"
-                 style="height: 22px">
+    <div style="margin-left: 5.2rem">
+        <label class="form-label" style="font-weight: bold;">Продукти</label>
+        <div class="row mb-2" th:each="product : ${aggregateProduct.getProductEntities()}">
+            <div class="col">
+                <img th:src="${product.marketEntity.logoUrl}"
+                     style="height: 22px">
+            </div>
+            <div class="col" th:text="${product.name}"></div>
+            <div class="col text-center" th:text="${product.category.name}"></div>
+            <div class="col text-center"><span th:text="${product.price}"></span> ₴</div>
+            <div class="col text-center" th:text="${product.unit}"></div>
+            <div class="col text-center" style="margin-top: -0.8rem">
+                <img th:src="${product.getImgUrl()}"
+                     style="width: 50px; height: 50px">
+            </div>
+            <div class="col text-center">
+                <a th:href="${'/admin/aggregate-products/' + aggregateProduct.id + '/unlink/' + product.id}">
+                    <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">
+                        Відвʼязати
+                    </button>
+                </a>
+            </div>
         </div>
-        <div class="col" th:text="${product.name}"></div>
-        <div class="col text-center" th:text="${product.category.name}"></div>
-        <div class="col text-center"> <span th:text="${product.price}"></span> ₴</div>
-        <div class="col text-center" th:text="${product.unit}"></div>
-        <div class="col text-center" style="margin-top: -0.8rem">
-            <img th:src="${product.getImgUrl()}"
-                 style="width: 50px; height: 50px">
+        <label for="name" class="form-label" style="font-weight: bold; margin-top: 1rem">Назва</label>
+        <input th:value="${aggregateProduct.name}" type="text" class="form-control" id="name" name="name"
+               style="width: 40rem; margin-bottom: 2rem">
+        <label class="form-label" style="font-weight: bold">Категорія</label>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="categoryName" th:text="${aggregateProduct.category.name}"> </span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
+                <li th:each="category : ${categories}" class="dropdown-item"
+                    th:style="'margin-left:' + ${category.getLevel() * 20} + 'px'"
+                    th:classappend="'category-level-' + ${category.getLevel() > 4? '4': category.getLevel()}">
+                    <a th:text="${category.getName()}"
+                       href="javascript://none"
+                       th:attr="onclick=|onSelect('${category.getId()}', '${category.getName()}')|"
+                       style="color: black"/>
+                </li>
+            </ul>
         </div>
-        <div class="col text-center">
-            <a th:href="${'/admin/aggregate-products/' + aggregateProduct.id + '/unlink/' + product.id}">
-                <button type="button" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Відвʼязати</button>
-            </a>
+        <label class="form-label" style="font-weight: bold;">Картинка</label>
+        <div class="d-flex" style="margin-bottom: 2rem">
+            <div class="form-check" th:each="product : ${aggregateProduct.productEntities}">
+                <label>
+                    <input class="form-check-input" type="radio" name="imageUrl"
+                           th:value="${product.imgUrl}"
+                           th:checked="${aggregateProduct.imageUrl == product.imgUrl} ? 'checked'">
+                    <img th:src="${product.imgUrl}"
+                         style="height: 150px">
+                </label>
+            </div>
         </div>
+        <button type="submit" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Зберегти</button>
     </div>
-    <label for="name" class="form-label" style="font-weight: bold; margin-top: 1rem">Назва</label>
-    <input th:value="${aggregateProduct.name}" type="text" class="form-control" id="name" name="name"  style="width: 40rem; margin-bottom: 2rem">
-    <label class="form-label" style="font-weight: bold">Категорія</label>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            <span id="categoryName" th:text="${aggregateProduct.category.name}"> </span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
-
-            <li th:each="category : ${categories}" class="dropdown-item"
-                th:style="'margin-left:' + ${category.getLevel() * 20} + 'px'"
-                th:classappend="'category-level-' + ${category.getLevel() > 4? '4': category.getLevel()}">
-                <a th:text="${category.getName()}"
-                   href="javascript://none"
-                   th:attr="onclick=|onSelect('${category.getId()}', '${category.getName()}')|"
-                   style="color: black"/>
-            </li>
-
-        </ul>
-    </div>
-    <label class="form-label" style="font-weight: bold;">Картинка</label>
-    <div class="d-flex" style="margin-bottom: 2rem" >
-        <div class="form-check" th:each="product : ${aggregateProduct.productEntities}">
-            <label>
-                <input class="form-check-input" type="radio" name="imageUrl"
-                       th:value="${product.imgUrl}"
-                       th:checked="${aggregateProduct.imageUrl == product.imgUrl} ? 'checked'">
-                <img th:src="${product.imgUrl}"
-                     style="height: 150px">
-            </label>
-        </div>
-
-    </div>
-    <button type="submit" class="btn btn-outline-dark" style="width: 7rem; margin-right: 3rem">Зберегти</button>
-</div>
 </form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
