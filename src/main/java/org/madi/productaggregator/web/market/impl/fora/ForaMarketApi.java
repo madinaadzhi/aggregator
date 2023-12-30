@@ -111,8 +111,4 @@ public class ForaMarketApi implements MarketApi {
         }
     }
 
-    @Override
-    public Stock getStock(String productId) {
-        return null;
-    }
 }

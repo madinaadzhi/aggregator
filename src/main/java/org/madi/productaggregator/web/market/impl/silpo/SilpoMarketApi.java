@@ -114,9 +114,4 @@ public class SilpoMarketApi implements MarketApi {
             throw new RuntimeException(e);
         }
     }
-
-    @Override
-    public Stock getStock(String productId) {
-        return null;
-    }
 }
