@@ -2,6 +2,7 @@ package org.madi.productaggregator.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -20,7 +21,8 @@ public class WebSecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/", "/products").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/", "/products", "/markets", "/cart").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/markets/distances", "/cart/addProduct", "/cart/removeProduct", "/cart/clear").permitAll()
                         .anyRequest().authenticated()
                 )
 

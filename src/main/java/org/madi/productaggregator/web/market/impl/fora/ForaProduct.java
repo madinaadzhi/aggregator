@@ -3,6 +3,7 @@ package org.madi.productaggregator.web.market.impl.fora;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.madi.productaggregator.web.market.api.Product;
+import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
 @Data

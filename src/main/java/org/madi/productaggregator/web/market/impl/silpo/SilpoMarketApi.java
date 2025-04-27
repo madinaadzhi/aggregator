@@ -43,6 +43,21 @@ public class SilpoMarketApi implements MarketApi {
             public String getSiteUrl() {
                 return "https://shop.silpo.ua/";
             }
+
+            @Override
+            public Double getLatitude() {
+                return 50.441310;
+            }
+
+            @Override
+            public Double getLongitude() {
+                return 30.521989;
+            }
+
+            @Override
+            public String getAddress() {
+                return "вулиця Басейна, 6, Київ";
+            }
         };
     }
 

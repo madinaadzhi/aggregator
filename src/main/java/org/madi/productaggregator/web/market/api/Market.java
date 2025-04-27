@@ -7,6 +7,10 @@ public interface Market {
 
     String getLogoUrl();
 
+    String getAddress();
+
     String getSiteUrl();
 
+    Double getLatitude();
+    Double getLongitude();
 }
