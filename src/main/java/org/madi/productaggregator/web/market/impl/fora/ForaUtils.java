@@ -22,11 +22,12 @@ public class ForaUtils {
         for (int i = 0; i < items.length(); i++) {
             JSONArray categories = items.getJSONObject(i).getJSONArray("categories");
             String externalId = String.valueOf(items.getJSONObject(i).get("id"));
+            String slug = String.valueOf(items.getJSONObject(i).getString("slug"));
             String name = items.getJSONObject(i).getString("name");
             double price = items.getJSONObject(i).getDouble("price");
             int quantity = items.getJSONObject(i).getInt("quantity");
             String categoryId = String.valueOf(categories.getJSONObject(categories.length() - 1).getInt("id"));
-            String siteUrl = "https://shop.fora.ua/product/" + externalId;
+            String siteUrl = "https://shop.fora.ua/product/" + slug;
             String imageUrl = items.getJSONObject(i).getString("mainImage");
             String unit = items.getJSONObject(i).getString("unit");
             ForaProduct product = new ForaProduct(externalId, name, price, quantity > 0, categoryId, siteUrl, imageUrl, unit);
