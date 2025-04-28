@@ -62,7 +62,7 @@ public class MarketGeoService implements MarketFinder {
         params.put("origin", userLat + "," + userLng);
         params.put("destination", marketLat + "," + marketLng);
 
-        String url = baseUrl + '?' + encodeParams(params) + "&key=AIzaSyAYlgHTgIhp9laluhJ621gxZc5jnQtRIYk";
+        String url = baseUrl + '?' + encodeParams(params) + "&key=";
 
         JSONObject response = JsonReader.read(url);
         JSONObject location = response.getJSONArray("routes").getJSONObject(0);
