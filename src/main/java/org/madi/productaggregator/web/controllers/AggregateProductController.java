@@ -1,16 +1,12 @@
 package org.madi.productaggregator.web.controllers;
 
-import org.madi.productaggregator.web.dao.AggregatorProductRepository;
+import jakarta.servlet.http.HttpServletRequest;
 import org.madi.productaggregator.web.dao.CategoryRepository;
-import org.madi.productaggregator.web.entities.AggregatorProductEntity;
 import org.madi.productaggregator.web.entities.CategoryEntity;
-import org.madi.productaggregator.web.util.PagingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.data.domain.Pageable;
 
 import java.util.*;
 
@@ -25,13 +21,15 @@ public class AggregateProductController {
 
     @GetMapping("products")
     public String list(@RequestParam Long categoryId, @RequestParam int pageSize, @RequestParam int activePage,
-                       @RequestParam(required = false) String productName, Model model) {
+                       @RequestParam(required = false) String productName, HttpServletRequest request, Model model) {
         Optional<CategoryEntity> category = categoryRepository.findById(categoryId);
         List<Long> childCategoryIds = getChildCategoryIds(category.get());
         List<CategoryEntity> parentCategories = getParentCategories(category.get());
         parentCategories.add(category.get());
         model.addAttribute("parentCategories", parentCategories);
         model.addAttribute("category", category.get());
+        model.addAttribute("requestUri", request.getRequestURI());
+        model.addAttribute("queryString", request.getQueryString());
 
         aggregatorProductHelper.putAggregatorProductInfoToModel(pageSize, activePage, productName, model, childCategoryIds);
         return "aggregate-products";

@@ -34,6 +34,4 @@ public class AggregatorProductEntity {
         this.categoryId = categoryID;
         this.imageUrl = imageUrl;
     }
-
-
 }
