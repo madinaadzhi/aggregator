@@ -21,8 +21,8 @@ public class WebSecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers(HttpMethod.GET, "/", "/products", "/markets", "/cart").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/markets/distances", "/cart/addProduct", "/cart/removeProduct", "/cart/clear").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/", "/products", "/cart", "/markets").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/markets/distances", "/cart/addProduct", "/cart/removeProduct", "cart/updateProduct").permitAll()
                         .anyRequest().authenticated()
                 )
 

@@ -5,6 +5,12 @@
     <title>Корзина продуктів</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
     <style>
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -29,48 +35,53 @@
         <th style="width: 130px"></th>
         <th class="text-center market-column" th:each="market, iterStat : ${markets}"
             th:data-market-index="${iterStat.index}" style="width: 170px">
-            <img th:src="${market.logoUrl}" width="70px" height="auto">
+            <img th:src="${market.logoUrl}" width="70px" height="auto" alt="">
         </th>
         <th style="width: 50px"></th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="cartItem, itemStat : ${cart}" th:data-row-index="${itemStat.index}">
-        <td class="align-middle"><img th:src="${cartItem.aggregatorEntity.imageUrl}" width="50px" height="auto"></td>
+        <td class="align-middle"><img th:src="${cartItem.aggregatorEntity.imageUrl}" width="50px" height="auto" alt="">
+        </td>
         <td class="align-middle"><a th:text="${cartItem.aggregatorEntity.name}"></a></td>
         <td class="align-middle text-center"><a th:text="${cartItem.aggregatorEntity.unit}"></a></td>
         <td class="align-middle">
-            <div class="input-group input-group-sm" style="max-width: 120px; margin: 0 auto;">
-                <button class="btn btn-outline-secondary" type="button"
-                        onclick="decrQuantity(this)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                         class="bi bi-dash" viewBox="0 0 16 16">
-                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
-                    </svg>
-                </button>
-                <input min="1" type="number" step="1" value="1" class="form-control text-center quantity-input"
-                       onchange="updRowTotals(this)">
-                <button class="btn btn-outline-secondary" type="button"
-                        onclick="incQuantity(this)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                         class="bi bi-plus" viewBox="0 0 16 16">
-                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                    </svg>
-                </button>
-            </div>
+            <form th:action="@{/cart/updateProduct}" method="post" th:id="'form' + ${cartItem.aggregatorEntity.id}">
+                <input type="hidden" name="productId" th:value="${cartItem.aggregatorEntity.id}"/>
+                <div class="input-group input-group-sm" style="max-width: 120px; margin: 0 auto;">
+                    <button class="submit" type="button"
+                            onclick="decrQuantity(this)" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px; border: 1px solid grey; background-color: #f0f1f2;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                             class="bi bi-dash" viewBox="0 0 16 16">
+                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+                        </svg>
+                    </button>
+                    <input name="quantity" min="1" type="number" step="1" th:value="${cartItem.quantity}"
+                           class="form-control text-center quantity-input"
+                           onchange="submitQuantityForm(this)" style="border-color: grey">
+                    <button class="submit" type="button"
+                            onclick="incQuantity(this)" style="border-top-right-radius: 5px; border-bottom-right-radius: 5px; border: 1px solid grey; background-color: #f0f1f2;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                             class="bi bi-plus" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+                    </button >
+                </div>
+            </form>
         </td>
         <td class="align-middle text-center"
-            th:each="productEntity, marketStat : ${cartItem.aggregatorEntity.productEntities}"
-            th:data-market-index="${marketStat.index}">
-            <div>
-                <a th:text="${productEntity.isAvailable ? productEntity.price + '₴' : 'Немає в наявності'}"
-                   th:attr="hidden=${productEntity.isAvailable}"
-                   th:classappend="${productEntity.isAvailable ? 'hidden=hidden' : 'text-danger text-decoration-none'}"
-                   th:data-price="${productEntity.isAvailable ? productEntity.price: '0'}" class="product-price">
-                </a>
-            </div>
-            <div th:if="${productEntity.isAvailable}" class="product-total">
-                <span class="total-price"></span><span>₴</span>
+            th:each="market, iterStat : ${markets}"
+            th:data-market-index="${iterStat.index}">
+            <div th:with="productEntity=${cartItem.getProductEntity(market.id)}">
+                <a th:if="${productEntity == null or !productEntity.isAvailable}"
+                   class="product-price text-danger text-decoration-none" data-price="0">Немає в наявності</a>
+                <a th:if="${productEntity != null and productEntity.isAvailable}"
+                   th:text="${productEntity.price + '₴'}" th:attr="data-price=${productEntity.price}"
+                   class="product-price d-none"></a>
+                <div th:if="${productEntity != null and productEntity.isAvailable}" class="product-total">
+                    <span class="total-price"></span><span>₴</span>
+                </div>
             </div>
         </td>
         <td class="align-middle text-center">
@@ -79,7 +90,6 @@
                 <button type="submit" class="btn remove-product-btn"
                         style="border: none; background: none"
                         th:id="'btn' + ${cartItem.aggregatorEntity.id}">
-
                     <svg th:id="'icon' + ${cartItem.aggregatorEntity.id}" viewBox="0 0 24 24" fill="none"
                          xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                          style="transition: color 0.3s ease;">
@@ -110,10 +120,52 @@
     </tr>
     </tbody>
 </table>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+<p class="d-inline-flex gap-1">
+    <a class="me-2 badge rounded-pill bg-none text-dark" data-bs-toggle="collapse" href="#marketDist" role="button"
+       aria-expanded="false"
+       aria-controls="marketDist"
+       style="display: flex; border: 1px solid grey; background-color: #f0f1f2; height: 2.3rem; align-items: center;
+       text-decoration: none; font-weight: normal; font-size: small; margin-left: 3.8rem">Найближчий магазин</a>
+</p>
+<div class="collapse" id="marketDist">
+    <div class="card card-body" style="border: none">
+        <b style="margin-left: 3rem">Оберіть точку на карті:</b>
+        <form id="coords-form" style="margin-left: 3rem; margin-top: 1rem; margin-bottom: 1rem"
+              th:action="@{/markets/distances}" method="post">
+            <div class="row g-3">
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="lat" name="lat" placeholder="Широта"
+                           th:value="${lat != null ? lat : '50.445090'}">
+                </div>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="lng" name="lng" placeholder="Довгота"
+                           th:value="${lng != null ? lng : '30.520731'}">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-light mb-3" style="--bs-btn-border-color: #000000;
+                --bs-btn-hover-border-color: #000000; --bs-btn-active-border-color: #000000;
+                --bs-btn-disabled-border-color: #000000;">ОК!
+                    </button>
+                </div>
+            </div>
+            <div id="map" style="height: 490px; width: 490px;"></div>
+        </form>
+        <div th:if="${nearbyMarkets}">
+            <b style="margin-left: 3.8rem; margin-top: 1rem">Магазини поблизу:</b>
+            <div th:each="marketDist : ${nearbyMarkets}" class="row" style="width: 850px; margin-top: 1rem">
+                <div class="col" style="max-width: 55px; margin-left: 3.8rem; margin-top: 0.5rem">
+                    <img th:src="${marketDist.market.logoUrl}" width="70px" height="auto" style="margin-top: -1rem">
+                </div>
+                <div class="col" style="margin-left: 4rem">
+                    <a th:text="${marketDist.market.address}"></a>
+                </div>
+                <div class="col" style="margin-left: -8rem">
+                    <span th:text="${marketDist.distance + ' м'}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     initCalculations();
@@ -130,6 +182,7 @@
         const input = button.parentNode.querySelector('input[type=number]');
         input.stepUp();
         updRowTotals(input);
+        input.closest('form').submit();
     }
 
     function decrQuantity(button) {
@@ -137,6 +190,7 @@
         if (parseInt(input.value) > 1) {
             input.stepDown();
             updRowTotals(input);
+            input.closest('form').submit();
         }
     }
 
@@ -170,6 +224,77 @@
             }
         }
     }
+
+    function submitQuantityForm(input) {
+        updRowTotals(input);
+        input.form.submit();
+    }
 </script>
+<script>
+    const latInput = parseFloat(document.getElementById('lat').value);
+    const lngInput = parseFloat(document.getElementById('lng').value);
+
+    var map = L.map('map').setView([latInput, lngInput], 15);
+    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var marker = L.marker([latInput, lngInput]).addTo(map);
+
+    function updateInputs(lat, lng) {
+        document.getElementById('lat').value = lat.toFixed(6);
+        document.getElementById('lng').value = lng.toFixed(6);
+    }
+
+    function onMapClick(e) {
+        const {lat, lng} = e.latlng;
+        marker.setLatLng([lat, lng]);
+        updateInputs(lat, lng);
+    }
+
+    function onInputChange() {
+        const lat = parseFloat(document.getElementById('lat').value);
+        const lng = parseFloat(document.getElementById('lng').value);
+        if (!isNaN(lat) && !isNaN(lng)) {
+            marker.setLatLng([lat, lng]);
+            map.setView([lat, lng]);
+        }
+    }
+
+    document.getElementById('lat').addEventListener('input', onInputChange);
+    document.getElementById('lng').addEventListener('input', onInputChange);
+
+    map.on('click', onMapClick);
+
+    const markerCoordinates = marker.getLatLng();
+    updateInputs(markerCoordinates.lat, markerCoordinates.lng);
+</script>
+<script th:inline="javascript">
+    var markets = [[${nearbyMarkets}]];
+
+    markets.forEach(function (marketDist) {
+        var lat = marketDist.market.latitude;
+        var lng = marketDist.market.longitude;
+        var logoUrl = marketDist.market.logoUrl;
+
+        var customIcon = L.icon({
+            iconUrl: logoUrl,
+            iconSize: [70],
+            iconAnchor: [20, 40],
+            popupAnchor: [0, -40]
+        });
+
+        var marketMarker = L.marker([lat, lng], {icon: customIcon}).addTo(map);
+    });
+</script>
+<script>
+    const collapseElement = document.getElementById('marketDist');
+    collapseElement.addEventListener('shown.bs.collapse', function () {
+        map.invalidateSize();
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,10 +1,9 @@
 package org.madi.productaggregator.web.controllers;
 
-import org.madi.productaggregator.web.cart.Cart;
+import jakarta.servlet.http.HttpServletRequest;
 import org.madi.productaggregator.web.cart.CartService;
-import org.madi.productaggregator.web.dao.MarketRepository;
-import org.madi.productaggregator.web.entities.MarketEntity;
-import org.madi.productaggregator.web.market.api.Market;
+import org.madi.productaggregator.web.cart.CartHelperService;
+import org.madi.productaggregator.web.geo.MarketGeoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,20 +11,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class CartController {
     @Autowired
     private CartService cartService;
-
     @Autowired
-    private CartHelper cartHelper;
+    private CartHelperService cartHelperService;
 
     @GetMapping("/cart")
-    public String showCart(Model model) {
-        model.addAttribute("markets", cartHelper.getMarkets());
+    public String showCart(HttpServletRequest request, Model model) {
+        model.addAttribute("requestURI", request.getRequestURI());
+        model.addAttribute("markets", cartHelperService.getMarkets());
         model.addAttribute("cart", cartService.getCart());
         return "cart";
     }
@@ -33,21 +30,24 @@ public class CartController {
     @PostMapping("/cart/addProduct")
     public String addProduct(@RequestParam("productId") Long productId,
                              @RequestParam(value = "quantity", defaultValue = "1") Integer quantity,
-                             @RequestParam("redirectUrl") String redirectUrl) {
-        cartService.addProduct(productId, quantity);
-        redirectUrl.substring(0, redirectUrl.length() - 13);
-        return "redirect:" + redirectUrl;
+                             @RequestParam(value = "redirectUrl", required = false) String redirectUrl) {
+        cartService.addProd(productId, quantity);
+        if (redirectUrl != null && !redirectUrl.isBlank()) {
+            return "redirect:" + redirectUrl;
+        }
+        return null;
+    }
+
+    @PostMapping("/cart/updateProduct")
+    public String updateQuantity(@RequestParam Long productId,
+                                 @RequestParam Integer quantity) {
+        cartService.updateProdQuantity(productId, quantity);
+        return "redirect:/cart";
     }
 
     @PostMapping("/cart/removeProduct")
     public String removeProduct(@RequestParam("productId") Long productId) {
-        cartService.removeProduct(productId);
+        cartService.removeProd(productId);
         return "redirect:/cart?removed=true";
-    }
-
-    @PostMapping("/cart/clear")
-    public String clearCart() {
-        cartService.clearCart();
-        return "redirect:/cart?cleared=true";
     }
 }

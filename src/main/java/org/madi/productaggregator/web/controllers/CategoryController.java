@@ -1,5 +1,6 @@
 package org.madi.productaggregator.web.controllers;
 
+import org.madi.productaggregator.web.cart.CartService;
 import org.madi.productaggregator.web.dao.CategoryRepository;
 import org.madi.productaggregator.web.entities.CategoryEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class CategoryController {
     @Value("${aggregator.market.id}")
     private Long aggrMarketId;
 
+    @Autowired
+    private CartService cartService;
+
     @GetMapping("/")
     public String list(Model model) {
         Iterable<CategoryEntity> entities = categoryRepository.getCategoryEntitiesByMarketId(aggrMarketId);
@@ -30,6 +34,7 @@ public class CategoryController {
             }
         }
         model.addAttribute("parentCategories", parentCategories);
+        model.addAttribute("cart", cartService.getCart());
         return "aggregate-categories";
     }
 

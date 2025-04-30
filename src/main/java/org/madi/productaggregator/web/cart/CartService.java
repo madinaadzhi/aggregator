@@ -1,22 +1,18 @@
 package org.madi.productaggregator.web.cart;
 
+import lombok.RequiredArgsConstructor;
 import org.madi.productaggregator.web.dao.AggregatorProductRepository;
 import org.madi.productaggregator.web.entities.AggregatorProductEntity;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
 import java.util.Optional;
 import java.util.Set;
 
 @Service
+@RequiredArgsConstructor
 public class CartService implements CartManager {
-    @Autowired
-    private Cart cart;
-
-    @Autowired
-    private AggregatorProductRepository aggregatorProductRepository;
-
+    private final Cart cart;
+    private final AggregatorProductRepository aggregatorProductRepository;
 
     @Override
     public Set<CartItem> getCart() {
@@ -24,15 +20,21 @@ public class CartService implements CartManager {
     }
 
     @Override
-    public void addProduct(Long aggregateProductId, Integer quantity) {
+    public void addProd(Long aggregateProductId, Integer quantity) {
+        Optional<AggregatorProductEntity> aggregatorProduct = aggregatorProductRepository.findById(aggregateProductId);
+        cart.getCart().add(new CartItem(aggregatorProduct.get(), quantity));
+    }
+
+    @Override
+    public void updateProdQuantity(Long aggregateProductId, Integer quantity) {
         Optional<AggregatorProductEntity> aggregatorProduct = aggregatorProductRepository.findById(aggregateProductId);
         if (aggregatorProduct.isPresent()) {
-            CartItem existingItem = cart.getCart().stream()
+            CartItem productFromCart = cart.getCart().stream()
                     .filter(item -> item.getAggregatorEntity().getId().equals(aggregateProductId))
                     .findFirst()
                     .orElse(null);
-            if (existingItem != null) {
-                existingItem.setQuantity(existingItem.getQuantity() + quantity);
+            if (productFromCart != null) {
+                productFromCart.setQuantity(quantity);
             } else {
                 cart.getCart().add(new CartItem(aggregatorProduct.get(), quantity));
             }
@@ -40,12 +42,7 @@ public class CartService implements CartManager {
     }
 
     @Override
-    public void removeProduct(Long aggregateProductId) {
+    public void removeProd(Long aggregateProductId) {
         cart.getCart().removeIf(cartItem -> cartItem.getAggregatorEntity().getId().equals(aggregateProductId));
-    }
-
-    @Override
-    public void clearCart() {
-        cart.getCart().clear();
     }
 }

@@ -4,13 +4,13 @@
 <header>
     <div class="d-flex mt-3 mb-5" style="align-items: center;">
         <a href="/" th:text="AGG"
-           style="font-size: 50px; color: black; text-decoration: none; margin-left: 5.2rem; margin-right: 79.8rem; vertical-align: middle"></a>
+           style="font-size: 50px; color: black; text-decoration: none; margin-left: 5.2rem; margin-right: 88.7rem; vertical-align: middle"></a>
         <div class="d-flex">
-            <a th:href="@{/cart}" id="cart" class="me-2 badge rounded-pill bg-none text-dark"
-               style="display: flex; border: 1px solid grey; background-color: #f0f1f2; height: 2.3rem; align-items: center; text-decoration: none; font-weight: normal; font-size: small; margin-right: 1rem;">Корзина</a>
-            <a th:href="@{/markets}" id="market" class="me-2 badge rounded-pill bg-none text-dark"
-               style="display: flex; border: 1px solid grey; background-color: #f0f1f2; height: 2.3rem; align-items: center; text-decoration: none; font-weight: normal; font-size: small; ">Найближчий
-                магазин</a>
+            <a th:href="@{/cart}" id="cart"
+               class="me-2 badge rounded-pill bg-none text-dark"
+               style="display: flex; border: 1px solid grey; background-color: #f0f1f2; height: 2.3rem; align-items: center; text-decoration: none; font-weight: normal; font-size: small; margin-right: 1rem;">
+                Корзина <span th:text="'(' + ${cart.size()} + ')'"></span>
+            </a>
         </div>
     </div>
 </header>

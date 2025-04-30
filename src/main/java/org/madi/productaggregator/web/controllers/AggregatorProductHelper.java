@@ -6,12 +6,12 @@ import org.madi.productaggregator.web.util.PagingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
 import java.util.List;
 
-@Service
+@Component
 public class AggregatorProductHelper {
     @Autowired
     private AggregatorProductRepository aggregatorProductRepository;
