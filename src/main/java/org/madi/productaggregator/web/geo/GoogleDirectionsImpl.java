@@ -18,7 +18,7 @@ import java.net.URLEncoder;
 import java.util.*;
 
 @Service
-public class MarketGeoService implements MarketFinder {
+public class GoogleDirectionsImpl implements DirectionsApi {
     @Autowired
     private MarketRepository marketRepository;
 

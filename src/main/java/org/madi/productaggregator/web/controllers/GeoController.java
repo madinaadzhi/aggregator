@@ -2,8 +2,8 @@ package org.madi.productaggregator.web.controllers;
 
 import org.madi.productaggregator.web.cart.CartHelperService;
 import org.madi.productaggregator.web.cart.CartService;
+import org.madi.productaggregator.web.geo.GoogleDirectionsImpl;
 import org.madi.productaggregator.web.geo.MarketDist;
-import org.madi.productaggregator.web.geo.MarketGeoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +19,7 @@ public class GeoController {
     private CartService cartService;
 
     @Autowired
-    private MarketGeoService marketGeoService;
+    private GoogleDirectionsImpl googleDirectionsImpl;
 
     @Autowired
     private CartHelperService cartHelperService;
@@ -28,12 +28,14 @@ public class GeoController {
     public String handleCoordinates(@RequestParam("lat") double lat,
                                     @RequestParam("lng") double lng,
                                     Model model) throws IOException {
-        List<MarketDist> nearbyMarkets = marketGeoService.findMarkets(lat, lng);
+        List<MarketDist> nearbyMarkets = googleDirectionsImpl.findMarkets(lat, lng);
         model.addAttribute("lat", lat);
         model.addAttribute("lng", lng);
         model.addAttribute("cart", cartService.getCart());
         model.addAttribute("markets", cartHelperService.getMarkets());
         model.addAttribute("nearbyMarkets", nearbyMarkets);
+        model.addAttribute("expanded", true);
+
         return "cart";
     }
 }

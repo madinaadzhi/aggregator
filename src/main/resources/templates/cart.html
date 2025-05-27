@@ -122,12 +122,12 @@
 </table>
 <p class="d-inline-flex gap-1">
     <a class="me-2 badge rounded-pill bg-none text-dark" data-bs-toggle="collapse" href="#marketDist" role="button"
-       aria-expanded="false"
+       aria-expanded=true
        aria-controls="marketDist"
        style="display: flex; border: 1px solid grey; background-color: #f0f1f2; height: 2.3rem; align-items: center;
        text-decoration: none; font-weight: normal; font-size: small; margin-left: 3.8rem">Найближчий магазин</a>
 </p>
-<div class="collapse" id="marketDist">
+<div class="collapse" th:classappend="${expanded ? 'show' : ''}" id="marketDist">
     <div class="card card-body" style="border: none">
         <b style="margin-left: 3rem">Оберіть точку на карті:</b>
         <form id="coords-form" style="margin-left: 3rem; margin-top: 1rem; margin-bottom: 1rem"
@@ -151,9 +151,9 @@
             <div id="map" style="height: 490px; width: 490px;"></div>
         </form>
         <div th:if="${nearbyMarkets}">
-            <b style="margin-left: 3.8rem; margin-top: 1rem">Магазини поблизу:</b>
+            <b style="margin-left: 3rem; margin-top: 1rem">Магазини поблизу:</b>
             <div th:each="marketDist : ${nearbyMarkets}" class="row" style="width: 850px; margin-top: 1rem">
-                <div class="col" style="max-width: 55px; margin-left: 3.8rem; margin-top: 0.5rem">
+                <div class="col" style="max-width: 55px; margin-left: 3rem; margin-top: 0.5rem">
                     <img th:src="${marketDist.market.logoUrl}" width="70px" height="auto" style="margin-top: -1rem">
                 </div>
                 <div class="col" style="margin-left: 4rem">
@@ -258,6 +258,10 @@
         if (!isNaN(lat) && !isNaN(lng)) {
             marker.setLatLng([lat, lng]);
             map.setView([lat, lng]);
+        }
+
+        if (isNaN(lat) || isNaN(lng)) {
+            alert('Будь ласка, введіть коректні числові значення для широти та довготи.');
         }
     }
 

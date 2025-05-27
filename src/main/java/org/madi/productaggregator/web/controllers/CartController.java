@@ -3,7 +3,6 @@ package org.madi.productaggregator.web.controllers;
 import jakarta.servlet.http.HttpServletRequest;
 import org.madi.productaggregator.web.cart.CartService;
 import org.madi.productaggregator.web.cart.CartHelperService;
-import org.madi.productaggregator.web.geo.MarketGeoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +23,7 @@ public class CartController {
         model.addAttribute("requestURI", request.getRequestURI());
         model.addAttribute("markets", cartHelperService.getMarkets());
         model.addAttribute("cart", cartService.getCart());
+        model.addAttribute("expanded", false);
         return "cart";
     }
 
